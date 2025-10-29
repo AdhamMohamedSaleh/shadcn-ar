@@ -3,7 +3,7 @@
 import * as React from "react"
 import { useRouter } from "next/navigation"
 import { type DialogProps } from "@radix-ui/react-dialog"
-import { IconArrowRight } from "@tabler/icons-react"
+import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react"
 import { useDocsSearch } from "fumadocs-core/search/client"
 import { CornerDownLeftIcon, SquareDashedIcon } from "lucide-react"
 
@@ -197,17 +197,18 @@ export function CommandMenu({
         <Button
           variant="secondary"
           className={cn(
-            "bg-surface text-foreground dark:bg-card relative h-8 w-full justify-start pl-3 font-medium shadow-none sm:pr-12 md:w-48 lg:w-56 xl:w-64"
+            "bg-surface text-foreground dark:bg-card relative h-8 w-full justify-start font-medium shadow-none sm:pe-12 md:w-48 lg:w-56 xl:w-64",
+            "ltr:pl-3 rtl:ps-3"
           )}
           onClick={() => setOpen(true)}
           {...props}
         >
-          <span className="hidden lg:inline-flex">Search documentation...</span>
-          <span className="inline-flex lg:hidden">Search...</span>
-          <div className="absolute top-1.5 right-1.5 hidden gap-1 sm:flex">
+          <span className="hidden lg:inline-flex">البحث في التوثيق...</span>
+          <span className="inline-flex lg:hidden">بحث...</span>
+          <div className="absolute top-1.5 hidden gap-1 sm:flex ltr:right-1.5 rtl:left-1.5">
             <KbdGroup>
-              <Kbd className="border">{isMac ? "⌘" : "Ctrl"}</Kbd>
               <Kbd className="border">K</Kbd>
+              <Kbd className="border">{isMac ? "⌘" : "Ctrl"}</Kbd>
             </KbdGroup>
           </div>
         </Button>
@@ -217,8 +218,8 @@ export function CommandMenu({
         className="rounded-xl border-none bg-clip-padding p-2 pb-11 shadow-2xl ring-4 ring-neutral-200/80 dark:bg-neutral-900 dark:ring-neutral-800"
       >
         <DialogHeader className="sr-only">
-          <DialogTitle>Search documentation...</DialogTitle>
-          <DialogDescription>Search for a command to run...</DialogDescription>
+          <DialogTitle>البحث في التوثيق...</DialogTitle>
+          <DialogDescription>ابحث عن أمر لتنفيذه...</DialogDescription>
         </DialogHeader>
         <Command
           className="**:data-[slot=command-input-wrapper]:bg-input/50 **:data-[slot=command-input-wrapper]:border-input rounded-none bg-transparent **:data-[slot=command-input]:!h-9 **:data-[slot=command-input]:py-0 **:data-[slot=command-input-wrapper]:mb-0 **:data-[slot=command-input-wrapper]:!h-9 **:data-[slot=command-input-wrapper]:rounded-md **:data-[slot=command-input-wrapper]:border"
@@ -232,20 +233,20 @@ export function CommandMenu({
           }}
         >
           <div className="relative">
-            <CommandInput placeholder="Search documentation..." />
+            <CommandInput placeholder="البحث في التوثيق..." />
             {query.isLoading && (
-              <div className="pointer-events-none absolute top-1/2 right-3 z-10 flex -translate-y-1/2 items-center justify-center">
+              <div className="pointer-events-none absolute top-1/2 z-10 flex -translate-y-1/2 items-center justify-center ltr:right-3 rtl:left-3">
                 <Spinner className="text-muted-foreground size-4" />
               </div>
             )}
           </div>
           <CommandList className="no-scrollbar min-h-80 scroll-pt-2 scroll-pb-1.5">
             <CommandEmpty className="text-muted-foreground py-12 text-center text-sm">
-              {query.isLoading ? "Searching..." : "No results found."}
+              {query.isLoading ? "جاري البحث..." : "لم يتم العثور على نتائج."}
             </CommandEmpty>
             {navItems && navItems.length > 0 && (
               <CommandGroup
-                heading="Pages"
+                heading="الصفحات"
                 className="!p-0 [&_[cmdk-group-heading]]:scroll-mt-16 [&_[cmdk-group-heading]]:!p-3 [&_[cmdk-group-heading]]:!pb-1"
               >
                 {navItems.map((item) => (
@@ -261,7 +262,8 @@ export function CommandMenu({
                       runCommand(() => router.push(item.href))
                     }}
                   >
-                    <IconArrowRight />
+                    <IconArrowRight className="ltr:inline rtl:hidden" />
+                    <IconArrowLeft className="ltr:hidden rtl:inline" />
                     {item.label}
                   </CommandMenuItem>
                 ))}
@@ -301,7 +303,10 @@ export function CommandMenu({
                           {isComponent ? (
                             <div className="border-muted-foreground aspect-square size-4 rounded-full border border-dashed" />
                           ) : (
-                            <IconArrowRight />
+                            <div>
+                              <IconArrowRight className="ltr:inline rtl:hidden" />
+                              <IconArrowLeft className="ltr:hidden rtl:inline" />
+                            </div>
                           )}
                           {item.name}
                         </CommandMenuItem>
@@ -340,7 +345,7 @@ export function CommandMenu({
                       style={{ "--color": color.oklch } as React.CSSProperties}
                     />
                     {color.className}
-                    <span className="text-muted-foreground ml-auto font-mono text-xs font-normal tabular-nums">
+                    <span className="text-muted-foreground font-mono text-xs font-normal tabular-nums ltr:ml-auto rtl:mr-auto">
                       {color.oklch}
                     </span>
                   </CommandMenuItem>
@@ -349,7 +354,7 @@ export function CommandMenu({
             ))}
             {blocks?.length ? (
               <CommandGroup
-                heading="Blocks"
+                heading="الكتل"
                 className="!p-0 [&_[cmdk-group-heading]]:!p-3"
               >
                 {blocks.map((block) => (
@@ -375,7 +380,7 @@ export function CommandMenu({
                   >
                     <SquareDashedIcon />
                     {block.description}
-                    <span className="text-muted-foreground ml-auto font-mono text-xs font-normal tabular-nums">
+                    <span className="text-muted-foreground font-mono text-xs font-normal tabular-nums ltr:ml-auto rtl:mr-auto">
                       {block.name}
                     </span>
                   </CommandMenuItem>
@@ -393,12 +398,12 @@ export function CommandMenu({
         <div className="text-muted-foreground absolute inset-x-0 bottom-0 z-20 flex h-10 items-center gap-2 rounded-b-xl border-t border-t-neutral-100 bg-neutral-50 px-4 text-xs font-medium dark:border-t-neutral-700 dark:bg-neutral-800">
           <div className="flex items-center gap-2">
             <CommandMenuKbd>
-              <CornerDownLeftIcon />
+              <CornerDownLeftIcon className="rtl:rotate-180" />
             </CommandMenuKbd>{" "}
             {selectedType === "page" || selectedType === "component"
-              ? "Go to Page"
+              ? "الانتقال للصفحة"
               : null}
-            {selectedType === "color" ? "Copy OKLCH" : null}
+            {selectedType === "color" ? "نسخ OKLCH" : null}
           </div>
           {copyPayload && (
             <>
@@ -506,7 +511,7 @@ function SearchResults({
   return (
     <CommandGroup
       className="!px-0 [&_[cmdk-group-heading]]:scroll-mt-16 [&_[cmdk-group-heading]]:!p-3 [&_[cmdk-group-heading]]:!pb-1"
-      heading="Search Results"
+      heading="نتائج البحث"
     >
       {uniqueResults.map((item) => {
         return (

@@ -1,37 +1,37 @@
 export const siteConfig = {
-  name: "shadcn/ui",
+  name: "shadcn - بالعربي",
   url: "https://ui.shadcn.com",
   ogImage: "https://ui.shadcn.com/og.jpg",
   description:
-    "A set of beautifully designed components that you can customize, extend, and build on. Start here then make it your own. Open Source. Open Code.",
+    "shadcn - بالعربي",
   links: {
-    twitter: "https://twitter.com/shadcn",
-    github: "https://github.com/shadcn-ui/ui",
+    twitter: "#",
+    github: "#",
   },
   navItems: [
     {
       href: "/docs/installation",
-      label: "Docs",
+      label: "المستندات",
     },
     {
       href: "/docs/components",
-      label: "Components",
+      label: "المكونات",
     },
     {
       href: "/blocks",
-      label: "Blocks",
+      label: "الكتل",
     },
     {
       href: "/charts/area",
-      label: "Charts",
+      label: "المخططات",
     },
     {
       href: "/themes",
-      label: "Themes",
+      label: "المظاهر",
     },
     {
       href: "/colors",
-      label: "Colors",
+      label: "الألوان",
     },
   ],
 }
