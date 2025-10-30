@@ -20,7 +20,7 @@ export default function Page() {
           src="/examples/dashboard-light.png"
           width={1280}
           height={843}
-          alt="Authentication"
+          alt="المصادقة"
           className="block dark:hidden"
           priority
         />
@@ -28,7 +28,7 @@ export default function Page() {
           src="/examples/dashboard-dark.png"
           width={1280}
           height={843}
-          alt="Authentication"
+          alt="المصادقة"
           className="hidden dark:block"
           priority
         />

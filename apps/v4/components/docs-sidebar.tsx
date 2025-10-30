@@ -18,25 +18,25 @@ import {
 } from "@/registry/new-york-v4/ui/sidebar"
 
 const TOP_LEVEL_SECTIONS = [
-  { name: "Get Started", href: "/docs" },
+  { name: "ابدأ هنا", href: "/docs" },
   {
-    name: "Components",
+    name: "المكونات",
     href: "/docs/components",
   },
   {
-    name: "Registry",
+    name: "السجل",
     href: "/docs/registry",
   },
   {
-    name: "MCP Server",
+    name: "خادم MCP",
     href: "/docs/mcp",
   },
   {
-    name: "Forms",
+    name: "النماذج",
     href: "/docs/forms",
   },
   {
-    name: "Changelog",
+    name: "سجل التغييرات",
     href: "/docs/changelog",
   },
 ]
@@ -59,7 +59,7 @@ export function DocsSidebar({
         <div className="h-(--top-spacing) shrink-0" />
         <SidebarGroup>
           <SidebarGroupLabel className="text-muted-foreground font-medium">
-            Sections
+            الأقسام
           </SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
@@ -126,7 +126,7 @@ export function DocsSidebar({
                                 {PAGES_NEW.includes(item.url) && (
                                   <span
                                     className="flex size-2 rounded-full bg-blue-500"
-                                    title="New"
+                                    title="جديد"
                                   />
                                 )}
                               </Link>

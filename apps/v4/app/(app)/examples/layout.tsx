@@ -16,8 +16,8 @@ import { Button } from "@/registry/new-york-v4/ui/button"
 export const dynamic = "force-static"
 export const revalidate = false
 
-const title = "Examples"
-const description = "Check out some examples app built using the components."
+const title = "أمثلة"
+const description = "اطلع على بعض أمثلة التطبيقات المبنية باستخدام المكونات."
 
 export const metadata: Metadata = {
   title,
@@ -52,18 +52,17 @@ export default function ExamplesLayout({
     <>
       <PageHeader>
         <Announcement />
-        <PageHeaderHeading>Build your Component Library</PageHeaderHeading>
+        <PageHeaderHeading>ابنِ مكتبة المكونات الخاصة بك</PageHeaderHeading>
         <PageHeaderDescription>
-          A set of beautifully-designed, accessible components and a code
-          distribution platform. Works with your favorite frameworks. Open
-          Source. Open Code.
+          مجموعة من المكونات الجميلة وسهلة الوصول ومنصة لتوزيع الشيفرة.
+          تعمل مع أطر العمل المفضلة لديك. مفتوح المصدر. شيفرة مفتوحة.
         </PageHeaderDescription>
         <PageActions>
           <Button asChild size="sm">
-            <Link href="/docs">Get Started</Link>
+            <Link href="/docs">ابدأ الآن</Link>
           </Button>
           <Button asChild size="sm" variant="ghost">
-            <Link href="/blocks">Browse Blocks</Link>
+            <Link href="/blocks">تصفح الكتل</Link>
           </Button>
         </PageActions>
       </PageHeader>

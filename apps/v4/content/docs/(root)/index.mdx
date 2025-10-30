@@ -1,77 +1,73 @@
 ---
-title: Introduction
-description: shadcn/ui is a set of beautifully-designed, accessible components and a code distribution platform. Works with your favorite frameworks and AI models. Open Source. Open Code.
+title: المقدمة
+description: shadcn/ui هو مجموعة من المكونات الجميلة وسهلة الوصول ومنصة لتوزيع الشيفرة. يعمل مع أُطر عملك ونماذج الذكاء الاصطناعي المفضلة لديك. مفتوح المصدر. شيفرة مفتوحة.
 ---
 
-**This is not a component library. It is how you build your component library.**
+**هذه ليست مكتبة مكونات. هذه هي الطريقة التي تبني بها مكتبة المكونات الخاصة بك.**
 
-You know how most traditional component libraries work: you install a package from NPM, import the components, and use them in your app.
+أنت تعرف كيف تعمل معظم مكتبات المكونات التقليدية: تثبّت حزمة من NPM، وتستورد المكونات، وتستخدمها في تطبيقك.
 
-This approach works well until you need to customize a component to fit your design system or require one that isn’t included in the library. **Often, you end up wrapping library components, writing workarounds to override styles, or mixing components from different libraries with incompatible APIs.**
+يعمل هذا النهج جيدًا حتى تحتاج إلى تخصيص مكوّن ليتوافق مع نظام تصميمك أو تحتاج مكوّنًا غير موجود في المكتبة. **غالبًا ما ينتهي بك الأمر إلى تغليف مكوّنات المكتبة، أو كتابة حلول التفافية لتجاوز الأنماط، أو مزج مكوّنات من مكتبات مختلفة بواجهات برمجة غير متوافقة.**
 
-This is what shadcn/ui aims to solve. It is built around the following principles:
+هذا ما يهدف shadcn/ui إلى حله. وقد بُني حول المبادئ التالية:
 
-- **Open Code:** The top layer of your component code is open for modification.
-- **Composition:** Every component uses a common, composable interface, making them predictable.
-- **Distribution:** A flat-file schema and command-line tool make it easy to distribute components.
-- **Beautiful Defaults:** Carefully chosen default styles, so you get great design out-of-the-box.
-- **AI-Ready:** Open code for LLMs to read, understand, and improve.
+- **شيفرة مفتوحة:** الطبقة العليا من شيفرة مكوّناتك مفتوحة للتعديل.
+- **التركيب:** كل مكوّن يستخدم واجهة مشتركة قابلة للتركيب، ما يجعله متوقع السلوك.
+- **التوزيع:** مخطط ملفات مسطّح وأداة سطر أوامر لتوزيع المكونات بسهولة.
+- **افتراضيات جميلة:** أنماط افتراضية مختارة بعناية لتحصل على تصميم رائع مباشرة.
+- **جاهزية للذكاء الاصطناعي:** شيفرة مفتوحة لتستطيع النماذج اللغوية قراءتها وفهمها وتحسينها.
 
-## Open Code
+## الشيفرة المفتوحة
 
-shadcn/ui hands you the actual component code. You have full control to customize and extend the components to your needs. This means:
+يمنحك shadcn/ui الشيفرة الفعلية للمكوّن. لديك تحكّم كامل لتخصيص المكوّنات وتوسيعها وفق احتياجاتك. هذا يعني:
 
-- **Full Transparency:** You see exactly how each component is built.
-- **Easy Customization:** Modify any part of a component to fit your design and functionality requirements.
-- **AI Integration:** Access to the code makes it straightforward for LLMs to read, understand, and even improve your components.
+- **شفافية كاملة:** ترى بالضبط كيف يتم بناء كل مكوّن.
+- **تخصيص سهل:** عدّل أي جزء من المكوّن ليتناسب مع متطلبات التصميم والوظائف.
+- **تكامل مع الذكاء الاصطناعي:** الوصول إلى الشيفرة يجعل من السهل على النماذج اللغوية قراءتها وفهمها وحتى تحسين مكوّناتك.
 
-_In a typical library, if you need to change a button’s behavior, you have to override styles or wrap the component. With shadcn/ui, you simply edit the button code directly._
+_في مكتبة تقليدية، إذا احتجت لتغيير سلوك الزر، فعادةً ما تتجاوز الأنماط أو تغلف المكوّن. مع shadcn/ui، تقوم ببساطة بتحرير شيفرة الزر مباشرة._
 
 <Accordion collapsible>
   <AccordionItem value="faq-1" className="border-none">
     <AccordionTrigger>
-      How do I pull upstream updates in an Open Code approach?
+      كيف أسحب التحديثات من المصدر في نهج الشيفرة المفتوحة؟
     </AccordionTrigger>
     <AccordionContent>
       <p>
-        shadcn/ui follows a headless component architecture. This means the core
-        of your app can receive fixes by updating your dependencies, for
-        instance, radix-ui or input-otp.
+        يتبع shadcn/ui بنية مكونات بدون واجهة (Headless). هذا يعني أن لبّ تطبيقك يمكنه تلقي الإصلاحات عبر تحديث التبعيات، مثل radix-ui أو input-otp.
       </p>
       <p className="mt-4">
-        The topmost layer, i.e., the one closest to your design system, is not
-        coupled with the implementation of the library. It stays open for
-        modification.
+        الطبقة العليا، أي الأقرب إلى نظام تصميمك، غير مقترنة بتنفيذ المكتبة. تظل مفتوحة للتعديل.
       </p>
     </AccordionContent>
   </AccordionItem>
 </Accordion>
 
-## Composition
+## التركيب
 
-Every component in shadcn/ui shares a common, composable interface. **If a component does not exist, we bring it in, make it composable, and adjust its style to match and work with the rest of the design system.**
+كل مكوّن في shadcn/ui يشارك واجهة مشتركة قابلة للتركيب. **إذا لم يوجد مكوّن ما، نجلبه، ونجعله قابلاً للتركيب، ونعدّل نمطه ليطابق ويعمل مع بقية نظام التصميم.**
 
-_A shared, composable interface means it's predictable for both your team and LLMs. You are not learning different APIs for every new component. Even for third-party ones._
+_واجهة مشتركة قابلة للتركيب تعني سلوكًا متوقعًا لفريقك وللنماذج اللغوية. لن تتعلم واجهات مختلفة لكل مكوّن جديد، حتى لمكوّنات الطرف الثالث._
 
-## Distribution
+## التوزيع
 
-shadcn/ui is also a code distribution system. It defines a schema for components and a CLI to distribute them.
+shadcn/ui هو أيضًا نظام لتوزيع الشيفرة. يعرّف مخططًا للمكوّنات وأداة سطر أوامر لتوزيعها.
 
-- **Schema:** A flat-file structure that defines the components, their dependencies, and properties.
-- **CLI:** A command-line tool to distribute and install components across projects with cross-framework support.
+- **المخطط:** بنية ملفات مسطّحة تعرّف المكونات وتبعياتها وخصائصها.
+- **أداة CLI:** أداة سطر أوامر لتوزيع وتثبيت المكوّنات عبر المشاريع مع دعم عبر الأطر.
 
-_You can use the schema to distribute your components to other projects or have AI generate completely new components based on existing schema._
+_يمكنك استخدام المخطط لتوزيع مكوناتك على مشاريع أخرى أو جعل الذكاء الاصطناعي يولّد مكوّنات جديدة تمامًا بناءً على المخطط الحالي._
 
-## Beautiful Defaults
+## افتراضيات جميلة
 
-shadcn/ui comes with a large collection of components that have carefully chosen default styles. They are designed to look good on their own and to work well together as a consistent system:
+يأتي shadcn/ui بمجموعة كبيرة من المكوّنات ذات أنماط افتراضية مختارة بعناية. صُممت لتبدو جميلة بذاتها ولتعمل معًا كنظام متسق:
 
-- **Good Out-of-the-Box:** Your UI has a clean and minimal look without extra work.
-- **Unified Design:** Components naturally fit with one another. Each component is built to match the others, keeping your UI consistent.
-- **Easily Customizable:** If you want to change something, it's simple to override and extend the defaults.
+- **جيدة مباشرةً:** تحصل على واجهة نظيفة وبسيطة دون جهد إضافي.
+- **تصميم موحّد:** تتناسق المكوّنات طبيعيًا مع بعضها. كل مكوّن مبني ليتماشى مع الآخر، ما يحافظ على اتساق الواجهة.
+- **سهلة التخصيص:** إن أردت التغيير، فمن البسيط تجاوز الافتراضيات وتوسيعها.
 
-## AI-Ready
+## جاهزية للذكاء الاصطناعي
 
-The design of shadcn/ui makes it easy for AI tools to work with your code. Its open code and consistent API allow AI models to read, understand, and even generate new components.
+يجعل تصميم shadcn/ui من السهل على أدوات الذكاء الاصطناعي التعامل مع شيفرتك. تسمح الشيفرة المفتوحة وواجهة البرمجة المتسقة للنماذج بقراءة الشيفرة وفهمها وحتى توليد مكوّنات جديدة.
 
-_An AI model can learn how your components work and suggest improvements or even create new components that integrate with your existing design._
+_يمكن للنموذج تعلم كيفية عمل مكوناتك واقتراح تحسينات أو حتى إنشاء مكونات جديدة تتكامل مع تصميمك الحالي._

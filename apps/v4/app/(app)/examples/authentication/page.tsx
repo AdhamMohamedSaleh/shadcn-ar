@@ -8,8 +8,8 @@ import { FieldDescription } from "@/registry/new-york-v4/ui/field"
 import { UserAuthForm } from "@/app/(app)/examples/authentication/components/user-auth-form"
 
 export const metadata: Metadata = {
-  title: "Authentication",
-  description: "Authentication forms built using the components.",
+  title: "المصادقة",
+  description: "نماذج مصادقة مبنية باستخدام المكونات.",
 }
 
 export default function AuthenticationPage() {
@@ -20,7 +20,7 @@ export default function AuthenticationPage() {
           src="/examples/authentication-light.png"
           width={1280}
           height={843}
-          alt="Authentication"
+          alt="المصادقة"
           className="block dark:hidden"
           priority
         />
@@ -28,7 +28,7 @@ export default function AuthenticationPage() {
           src="/examples/authentication-dark.png"
           width={1280}
           height={843}
-          alt="Authentication"
+          alt="المصادقة"
           className="hidden dark:block"
           priority
         />
@@ -41,7 +41,7 @@ export default function AuthenticationPage() {
             "absolute top-4 right-4 md:top-8 md:right-8"
           )}
         >
-          Login
+          تسجيل الدخول
         </Link>
         <div className="text-primary relative hidden h-full flex-col p-10 lg:flex dark:border-r">
           <div className="bg-primary/5 absolute inset-0" />
@@ -58,13 +58,11 @@ export default function AuthenticationPage() {
             >
               <path d="M15 6v12a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V6a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3" />
             </svg>
-            Acme Inc
+            أكمي المحدودة
           </div>
           <div className="relative z-20 mt-auto">
             <blockquote className="leading-normal text-balance">
-              &ldquo;This library has saved me countless hours of work and
-              helped me deliver stunning designs to my clients faster than ever
-              before.&rdquo; - Sofia Davis
+              &ldquo;وفرت علي هذه المكتبة ساعات لا تُحصى من العمل وساعدتني على تسليم تصاميم مذهلة لعملائي أسرع من أي وقت مضى.&rdquo; - صوفيا ديفيس
             </blockquote>
           </div>
         </div>
@@ -72,17 +70,17 @@ export default function AuthenticationPage() {
           <div className="mx-auto flex w-full flex-col justify-center gap-6 sm:w-[350px]">
             <div className="flex flex-col gap-2 text-center">
               <h1 className="text-2xl font-semibold tracking-tight">
-                Create an account
+                أنشئ حسابًا
               </h1>
               <p className="text-muted-foreground text-sm">
-                Enter your email below to create your account
+                أدخل بريدك الإلكتروني أدناه لإنشاء حسابك
               </p>
             </div>
             <UserAuthForm />
             <FieldDescription className="px-6 text-center">
-              By clicking continue, you agree to our{" "}
-              <Link href="/terms">Terms of Service</Link> and{" "}
-              <Link href="/privacy">Privacy Policy</Link>.
+              بالنقر على متابعة، فإنك توافق على {" "}
+              <Link href="/terms">شروط الخدمة</Link> و {" "}
+              <Link href="/privacy">سياسة الخصوصية</Link>.
             </FieldDescription>
           </div>
         </div>

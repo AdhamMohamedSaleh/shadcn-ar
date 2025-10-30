@@ -8,25 +8,25 @@ import { ScrollArea, ScrollBar } from "@/registry/new-york-v4/ui/scroll-area"
 
 const examples = [
   {
-    name: "Dashboard",
+    name: "لوحة التحكم",
     href: "/examples/dashboard",
     code: "https://github.com/shadcn/ui/tree/main/apps/v4/app/(app)/examples/dashboard",
     hidden: false,
   },
   {
-    name: "Tasks",
+    name: "المهام",
     href: "/examples/tasks",
     code: "https://github.com/shadcn/ui/tree/main/apps/v4/app/(app)/examples/tasks",
     hidden: false,
   },
   {
-    name: "Playground",
+    name: "ساحة اللعب",
     href: "/examples/playground",
     code: "https://github.com/shadcn/ui/tree/main/apps/v4/app/(app)/examples/playground",
     hidden: false,
   },
   {
-    name: "Authentication",
+    name: "المصادقة",
     href: "/examples/authentication",
     code: "https://github.com/shadcn/ui/tree/main/apps/v4/app/(app)/examples/authentication",
     hidden: false,
@@ -44,7 +44,7 @@ export function ExamplesNav({
       <ScrollArea className="max-w-[96%] md:max-w-[600px] lg:max-w-none">
         <div className="flex items-center">
           <ExampleLink
-            example={{ name: "Examples", href: "/", code: "", hidden: false }}
+            example={{ name: "أمثلة", href: "/", code: "", hidden: false }}
             isActive={pathname === "/"}
           />
           {examples.map((example) => (

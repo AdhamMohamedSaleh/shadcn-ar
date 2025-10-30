@@ -10,8 +10,8 @@ import { UserNav } from "./components/user-nav"
 import { taskSchema } from "./data/schema"
 
 export const metadata: Metadata = {
-  title: "Tasks",
-  description: "A task and issue tracker build using Tanstack Table.",
+  title: "المهام",
+  description: "متعقب مهام ومشكلات مبني باستخدام TanStack Table.",
 }
 
 // Simulate a database read for tasks.
@@ -35,14 +35,14 @@ export default async function TaskPage() {
           src="/examples/tasks-light.png"
           width={1280}
           height={998}
-          alt="Playground"
+          alt="ساحة اللعب"
           className="block dark:hidden"
         />
         <Image
           src="/examples/tasks-dark.png"
           width={1280}
           height={998}
-          alt="Playground"
+          alt="ساحة اللعب"
           className="hidden dark:block"
         />
       </div>
@@ -50,10 +50,10 @@ export default async function TaskPage() {
         <div className="flex items-center justify-between gap-2">
           <div className="flex flex-col gap-1">
             <h2 className="text-2xl font-semibold tracking-tight">
-              Welcome back!
+              مرحبًا بعودتك!
             </h2>
             <p className="text-muted-foreground">
-              Here&apos;s a list of your tasks for this month.
+              إليك قائمة مهامك لهذا الشهر.
             </p>
           </div>
           <div className="flex items-center gap-2">

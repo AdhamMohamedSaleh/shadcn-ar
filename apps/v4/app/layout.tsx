@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   creator: "shadcn",
   openGraph: {
     type: "website",
-    locale: "en_US",
+    locale: "ar",
     url: process.env.NEXT_PUBLIC_APP_URL!,
     title: siteConfig.name,
     description: siteConfig.description,
@@ -64,7 +64,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning dir="rtl">
+    <html lang="ar" suppressHydrationWarning dir="rtl">
       <head>
         <script
           dangerouslySetInnerHTML={{

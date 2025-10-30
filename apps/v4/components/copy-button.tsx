@@ -65,12 +65,12 @@ export function CopyButton({
           }}
           {...props}
         >
-          <span className="sr-only">Copy</span>
+          <span className="sr-only">نسخ</span>
           {hasCopied ? <IconCheck /> : <IconCopy />}
         </Button>
       </TooltipTrigger>
       <TooltipContent>
-        {hasCopied ? "Copied" : "Copy to Clipboard"}
+        {hasCopied ? "تم النسخ" : "نسخ إلى الحافظة"}
       </TooltipContent>
     </Tooltip>
   )

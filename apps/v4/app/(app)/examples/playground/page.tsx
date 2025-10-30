@@ -31,8 +31,8 @@ import { models, types } from "./data/models"
 import { presets } from "./data/presets"
 
 export const metadata: Metadata = {
-  title: "Playground",
-  description: "The OpenAI Playground built using the components.",
+  title: "ساحة اللعب",
+  description: "ساحة OpenAI المبنية باستخدام المكونات.",
 }
 
 export default function PlaygroundPage() {
@@ -43,20 +43,20 @@ export default function PlaygroundPage() {
           src="/examples/playground-light.png"
           width={1280}
           height={916}
-          alt="Playground"
+          alt="ساحة اللعب"
           className="block dark:hidden"
         />
         <Image
           src="/examples/playground-dark.png"
           width={1280}
           height={916}
-          alt="Playground"
+          alt="ساحة اللعب"
           className="hidden dark:block"
         />
       </div>
       <div className="hidden flex-1 flex-col md:flex">
         <div className="container flex flex-col items-start justify-between gap-2 py-4 sm:flex-row sm:items-center sm:gap-0 md:h-16">
-          <h2 className="pl-0.5 text-lg font-semibold">Playground</h2>
+          <h2 className="pl-0.5 text-lg font-semibold">ساحة اللعب</h2>
           <div className="ml-auto flex w-full gap-2 sm:justify-end">
             <PresetSelector presets={presets} />
             <PresetSave />
@@ -76,19 +76,16 @@ export default function PlaygroundPage() {
                   <HoverCard openDelay={200}>
                     <HoverCardTrigger asChild>
                       <span className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
-                        Mode
+                        الوضع
                       </span>
                     </HoverCardTrigger>
                     <HoverCardContent className="w-[320px] text-sm" side="left">
-                      Choose the interface that best suits your task. You can
-                      provide: a simple prompt to complete, starting and ending
-                      text to insert a completion within, or some text with
-                      instructions to edit it.
+                      اختر الواجهة التي تناسب مهمتك. يمكنك تقديم: مطالبة بسيطة للإكمال، أو نص بداية ونهاية لإدراج الإكمال بداخله، أو نصًا مع تعليمات لتحريره.
                     </HoverCardContent>
                   </HoverCard>
                   <TabsList className="grid w-full grid-cols-3">
                     <TabsTrigger value="complete">
-                      <span className="sr-only">Complete</span>
+                      <span className="sr-only">إكمال</span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 20 20"
@@ -153,7 +150,7 @@ export default function PlaygroundPage() {
                       </svg>
                     </TabsTrigger>
                     <TabsTrigger value="insert">
-                      <span className="sr-only">Insert</span>
+                      <span className="sr-only">إدراج</span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 20 20"
@@ -193,7 +190,7 @@ export default function PlaygroundPage() {
                       </svg>
                     </TabsTrigger>
                     <TabsTrigger value="edit">
-                      <span className="sr-only">Edit</span>
+                      <span className="sr-only">تحرير</span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 20 20"
@@ -257,13 +254,13 @@ export default function PlaygroundPage() {
                 <TabsContent value="complete" className="mt-0 border-0 p-0">
                   <div className="flex h-full flex-col gap-4">
                     <Textarea
-                      placeholder="Write a tagline for an ice cream shop"
+                      placeholder="اكتب شعارًا لمتجر آيس كريم"
                       className="min-h-[400px] flex-1 p-4 md:min-h-[700px] lg:min-h-[700px]"
                     />
                     <div className="flex items-center gap-2">
-                      <Button>Submit</Button>
+                      <Button>إرسال</Button>
                       <Button variant="secondary">
-                        <span className="sr-only">Show history</span>
+                        <span className="sr-only">عرض السجل</span>
                         <RotateCcw />
                       </Button>
                     </div>
@@ -275,15 +272,15 @@ export default function PlaygroundPage() {
                 >
                   <div className="grid h-full grid-rows-2 gap-6 lg:grid-cols-2 lg:grid-rows-1">
                     <Textarea
-                      placeholder="We're writing to [inset]. Congrats from OpenAI!"
+                      placeholder="نكتب إلى [placeholder]. تهانينا من OpenAI!"
                       className="h-full min-h-[300px] p-4 lg:min-h-[700px] xl:min-h-[700px]"
                     />
                     <div className="bg-muted rounded-md border"></div>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Button>Submit</Button>
+                    <Button>إرسال</Button>
                     <Button variant="secondary">
-                      <span className="sr-only">Show history</span>
+                      <span className="sr-only">عرض السجل</span>
                       <RotateCcw />
                     </Button>
                   </div>
@@ -296,28 +293,28 @@ export default function PlaygroundPage() {
                     <div className="flex flex-col gap-4">
                       <div className="flex flex-1 flex-col gap-2">
                         <Label htmlFor="input" className="sr-only">
-                          Input
+                          الإدخال
                         </Label>
                         <Textarea
                           id="input"
-                          placeholder="We is going to the market."
+                          placeholder="نحن ذاهبون إلى السوق."
                           className="flex-1 p-4 lg:min-h-[580px]"
                         />
                       </div>
                       <div className="flex flex-col gap-2">
-                        <Label htmlFor="instructions">Instructions</Label>
+                        <Label htmlFor="instructions">تعليمات</Label>
                         <Textarea
                           id="instructions"
-                          placeholder="Fix the grammar."
+                          placeholder="صحح القواعد اللغوية."
                         />
                       </div>
                     </div>
                     <div className="bg-muted min-h-[400px] rounded-md border lg:min-h-[700px]" />
                   </div>
                   <div className="flex items-center gap-2">
-                    <Button>Submit</Button>
+                    <Button>إرسال</Button>
                     <Button variant="secondary">
-                      <span className="sr-only">Show history</span>
+                      <span className="sr-only">عرض السجل</span>
                       <RotateCcw />
                     </Button>
                   </div>
