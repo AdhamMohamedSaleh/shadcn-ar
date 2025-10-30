@@ -1,101 +1,100 @@
 ---
 title: shadcn
-description: Use the shadcn CLI to add components to your project.
+description: استخدم أداة سطر الأوامر shadcn لإضافة المكونات إلى مشروعك.
 ---
 
 ## init
 
-Use the `init` command to initialize configuration and dependencies for a new project.
+استخدم أمر `init` لتهيئة الإعدادات والتبعيات لمشروع جديد.
 
-The `init` command installs dependencies, adds the `cn` util and configures CSS variables for the project.
+يقوم أمر `init` بتثبيت التبعيات، إضافة أداة `cn`، وضبط متغيرات CSS للمشروع.
 
 ```bash
 npx shadcn@latest init
 ```
 
-### Options
+### الخيارات
 
 ```txt
-Usage: shadcn init [options] [components...]
+استخدام: shadcn init [الخيارات] [المكونات...]
 
-initialize your project and install dependencies
+تهيئة مشروعك وتثبيت التبعيات
 
-Arguments:
-  components         the components to add or a url to the component.
+المعطيات:
+  components         المكونات التي تود إضافتها أو رابط المكون
 
-Options:
-  -y, --yes           skip confirmation prompt. (default: true)
-  -d, --defaults,     use default configuration. (default: false)
-  -f, --force         force overwrite of existing configuration. (default: false)
-  -c, --cwd <cwd>     the working directory. defaults to the current directory. (default: "/Users/shadcn/Desktop")
-  -s, --silent        mute output. (default: false)
-  --src-dir           use the src directory when creating a new project. (default: false)
-  --no-src-dir        do not use the src directory when creating a new project.
-  --css-variables     use css variables for theming. (default: true)
-  --no-css-variables  do not use css variables for theming.
-  -h, --help          display help for command
+الخيارات:
+  -y, --yes           تجاوز رسالة التأكيد. (الافتراضي: true)
+  -d, --defaults      استخدام الإعدادات الافتراضية. (الافتراضي: false)
+  -f, --force         إجبار تحديث الإعدادات الموجودة. (الافتراضي: false)
+  -c, --cwd <cwd>     مسار العمل الحالي. الافتراضي هو المسار الحالي. (الافتراضي: "/Users/shadcn/Desktop")
+  -s, --silent        كتم الناتج. (الافتراضي: false)
+  --src-dir           استخدم مجلد src. (الافتراضي: false)
+  --no-src-dir        لا تستخدم مجلد src.
+  --css-variables     استخدم متغيرات css للثيمات. (الافتراضي: true)
+  --no-css-variables  لا تستخدم متغيرات css للثيمات.
+  -h, --help          عرض المساعدة للأمر
 ```
 
 ## add
 
-Use the `add` command to add components and dependencies to your project.
+استخدم أمر `add` لإضافة مكونات وتبعيات إلى مشروعك.
 
 ```bash
 npx shadcn@latest add [component]
 ```
 
-### Options
+### الخيارات
 
 ```txt
-Usage: shadcn add [options] [components...]
+استخدام: shadcn add [الخيارات] [المكونات...]
 
-add a component to your project
+إضافة مكون لمشروعك
 
-Arguments:
-  components         the components to add or a url to the component.
+المعطيات:
+  components         المكونات المراد إضافتها أو رابط المكون
 
-Options:
-  -y, --yes           skip confirmation prompt. (default: false)
-  -o, --overwrite     overwrite existing files. (default: false)
-  -c, --cwd <cwd>     the working directory. defaults to the current directory. (default: "/Users/shadcn/Desktop")
-  -a, --all           add all available components (default: false)
-  -p, --path <path>   the path to add the component to.
-  -s, --silent        mute output. (default: false)
-  --src-dir           use the src directory when creating a new project. (default: false)
-  --no-src-dir        do not use the src directory when creating a new project.
-  --css-variables     use css variables for theming. (default: true)
-  --no-css-variables  do not use css variables for theming.
-  -h, --help          display help for command
+الخيارات:
+  -y, --yes           تجاوز رسالة التأكيد. (الافتراضي: false)
+  -o, --overwrite     استبدال الملفات الموجودة. (الافتراضي: false)
+  -c, --cwd <cwd>     مسار العمل الحالي. الافتراضي هو المسار الحالي. (الافتراضي: "/Users/shadcn/Desktop")
+  -a, --all           إضافة جميع المكونات المتاحة (الافتراضي: false)
+  -p, --path <path>   المسار لإضافة المكون إليه.
+  -s, --silent        كتم الناتج. (الافتراضي: false)
+  --src-dir           استخدم مجلد src. (الافتراضي: false)
+  --no-src-dir        لا تستخدم مجلد src.
+  --css-variables     استخدم متغيرات css للثيمات. (الافتراضي: true)
+  --no-css-variables  لا تستخدم متغيرات css للثيمات.
+  -h, --help          عرض المساعدة للأمر
 ```
 
 ## build
 
-Use the `build` command to generate the registry JSON files.
+استخدم أمر `build` لإنشاء ملفات JSON الخاصة بالسجل.
 
 ```bash
 npx shadcn@latest build
 ```
 
-This command reads the `registry.json` file and generates the registry JSON files in the `public/r` directory.
+يقرأ هذا الأمر ملف `registry.json` وينشئ ملفات JSON الخاصة بالسجل في مجلد `public/r`.
 
-### Options
+### الخيارات
 
 ```txt
-Usage: shadcn build [options] [registry]
+استخدام: shadcn build [الخيارات] [registry]
 
-build components for a shadcn registry
+بناء المكونات لسجل shadcn
 
-Arguments:
-  registry             path to registry.json file (default: "./registry.json")
+المعطيات:
+  registry             مسار ملف registry.json (الافتراضي: "./registry.json")
 
-Options:
-  -o, --output <path>  destination directory for json files (default: "./public/r")
-  -c, --cwd <cwd>      the working directory. defaults to the current directory. (default:
-                       "/Users/shadcn/Code/shadcn/ui/packages/shadcn")
-  -h, --help           display help for command
+الخيارات:
+  -o, --output <path>  مسار مجلد الإخراج لملفات json (الافتراضي: "./public/r")
+  -c, --cwd <cwd>      مسار العمل الحالي (الافتراضي: "/Users/shadcn/Code/shadcn/ui/packages/shadcn")
+  -h, --help           عرض المساعدة للأمر
 ```
 
-To customize the output directory, use the `--output` option.
+لتخصيص مجلد الإخراج، استخدم خيار `--output`.
 
 ```bash
 npx shadcn@latest build --output ./public/registry

@@ -1,6 +1,6 @@
 ---
-title: Calendar
-description: A date field component that allows users to enter and edit date.
+title: التقويم
+description: مكون حقل تاريخ يسمح للمستخدمين بإدخال وتعديل التاريخ.
 component: true
 links:
   doc: https://react-day-picker.js.org
@@ -8,23 +8,23 @@ links:
 
 <ComponentPreview
   name="calendar-demo"
-  title="Calendar"
-  description="A calendar showing the current date."
+  title="التقويم"
+  description="تقويم يعرض التاريخ الحالي."
 />
 
-## Blocks
+## الكتل
 
-We have built a collection of 30+ calendar blocks that you can use to build your own calendar components.
+لقد قمنا ببناء مجموعة تضم أكثر من 30 كتلة تقويم يمكنك استخدامها لبناء مكونات التقويم الخاصة بك.
 
-See all calendar blocks in the [Blocks Library](/blocks/calendar) page.
+شاهد جميع كتل التقويم في صفحة [مكتبة الكتل](/blocks/calendar).
 
-## Installation
+## التثبيت
 
 <CodeTabs>
 
 <TabsList>
   <TabsTrigger value="cli">CLI</TabsTrigger>
-  <TabsTrigger value="manual">Manual</TabsTrigger>
+  <TabsTrigger value="manual">يدوي</TabsTrigger>
 </TabsList>
 <TabsContent value="cli">
 
@@ -38,21 +38,21 @@ npx shadcn@latest add calendar
 
 <Steps>
 
-<Step>Install the following dependencies:</Step>
+<Step>قم بتثبيت التبعيات التالية:</Step>
 
 ```bash
 npm install react-day-picker date-fns
 ```
 
-<Step>Add the `Button` component to your project.</Step>
+<Step>أضف مكون `Button` إلى مشروعك.</Step>
 
-The `Calendar` component uses the `Button` component. Make sure you have it installed in your project.
+يستخدم مكون `Calendar` مكون `Button`. تأكد من تثبيته في مشروعك.
 
-<Step>Copy and paste the following code into your project.</Step>
+<Step>انسخ والصق الكود التالي في مشروعك.</Step>
 
 <ComponentSource name="calendar" title="components/ui/calendar.tsx" />
 
-<Step>Update the import paths to match your project setup.</Step>
+<Step>قم بتحديث مسارات الاستيراد لتطابق إعداد مشروعك.</Step>
 
 </Steps>
 
@@ -60,7 +60,7 @@ The `Calendar` component uses the `Button` component. Make sure you have it inst
 
 </CodeTabs>
 
-## Usage
+## الاستخدام
 
 ```tsx showLineNumbers
 import { Calendar } from "@/components/ui/calendar"
@@ -79,23 +79,23 @@ return (
 )
 ```
 
-See the [React DayPicker](https://react-day-picker.js.org) documentation for more information.
+راجع وثائق [React DayPicker](https://react-day-picker.js.org) لمزيد من المعلومات.
 
-## About
+## حول
 
-The `Calendar` component is built on top of [React DayPicker](https://react-day-picker.js.org).
+مكون `Calendar` مبني فوق [React DayPicker](https://react-day-picker.js.org).
 
-## Customization
+## التخصيص
 
-See the [React DayPicker](https://react-day-picker.js.org/docs/customization) documentation for more information on how to customize the `Calendar` component.
+راجع وثائق [React DayPicker](https://react-day-picker.js.org/docs/customization) لمزيد من المعلومات حول كيفية تخصيص مكون `Calendar`.
 
-## Date Picker
+## منتقي التاريخ
 
-You can use the `<Calendar>` component to build a date picker. See the [Date Picker](/docs/components/date-picker) page for more information.
+يمكنك استخدام مكون `<Calendar>` لبناء منتقي تاريخ. راجع صفحة [منتقي التاريخ](/docs/components/date-picker) لمزيد من المعلومات.
 
-## Persian / Hijri / Jalali Calendar
+## التقويم الفارسي / الهجري / الجلالي
 
-To use the Persian calendar, edit `components/ui/calendar.tsx` and replace `react-day-picker` with `react-day-picker/persian`.
+لاستخدام التقويم الفارسي، قم بتحرير `components/ui/calendar.tsx` واستبدل `react-day-picker` بـ `react-day-picker/persian`.
 
 ```diff
 - import { DayPicker } from "react-day-picker"
@@ -104,13 +104,13 @@ To use the Persian calendar, edit `components/ui/calendar.tsx` and replace `reac
 
 <ComponentPreview
   name="calendar-hijri"
-  title="Persian / Hijri / Jalali Calendar"
-  description="A Persian calendar."
+  title="التقويم الفارسي / الهجري / الجلالي"
+  description="تقويم فارسي."
 />
 
-## Selected Date (With TimeZone)
+## التاريخ المحدد (مع المنطقة الزمنية)
 
-The Calendar component accepts a `timeZone` prop to ensure dates are displayed and selected in the user's local timezone.
+يقبل مكون التقويم خاصية `timeZone` لضمان عرض التواريخ واختيارها في المنطقة الزمنية المحلية للمستخدم.
 
 ```tsx showLineNumbers
 export function CalendarWithTimezone() {
@@ -132,65 +132,65 @@ export function CalendarWithTimezone() {
 }
 ```
 
-**Note:** If you notice a selected date offset (for example, selecting the 20th highlights the 19th), make sure the `timeZone` prop is set to the user's local timezone.
+**ملاحظة:** إذا لاحظت إزاحة في التاريخ المحدد (على سبيل المثال، تحديد اليوم العشرين يبرز اليوم التاسع عشر)، فتأكد من تعيين خاصية `timeZone` على المنطقة الزمنية المحلية للمستخدم.
 
-**Why client-side?** The timezone is detected using `Intl.DateTimeFormat().resolvedOptions().timeZone` inside a `useEffect` to ensure compatibility with server-side rendering. Detecting the timezone during render would cause hydration mismatches, as the server and client may be in different timezones.
+**لماذا من جانب العميل؟** يتم الكشف عن المنطقة الزمنية باستخدام `Intl.DateTimeFormat().resolvedOptions().timeZone` داخل `useEffect` لضمان التوافق مع العرض من جانب الخادم. سيؤدي الكشف عن المنطقة الزمنية أثناء العرض إلى عدم تطابق الترطيب، حيث قد يكون الخادم والعميل في مناطق زمنية مختلفة.
 
-## Examples
+## أمثلة
 
-### Range Calendar
+### تقويم النطاق
 
 <ComponentPreview
   name="calendar-05"
-  title="Range Calendar"
-  description="A calendar showing the current date and range selection."
+  title="تقويم النطاق"
+  description="تقويم يعرض التاريخ الحالي واختيار النطاق."
   className="**:[.preview]:h-auto lg:**:[.preview]:h-[450px]"
 />
 
-### Month and Year Selector
+### منتقي الشهر والسنة
 
 <ComponentPreview
   name="calendar-13"
-  title="Month and Year Selector"
-  description="A calendar with month and year dropdowns."
+  title="منتقي الشهر والسنة"
+  description="تقويم مع قوائم منسدلة للشهر والسنة."
 />
 
-### Date of Birth Picker
+### منتقي تاريخ الميلاد
 
 <ComponentPreview
   name="calendar-22"
-  title="Date of Birth Picker"
-  description="A calendar with date of birth picker."
+  title="منتقي تاريخ الميلاد"
+  description="تقويم مع منتقي تاريخ الميلاد."
 />
 
-### Date and Time Picker
+### منتقي التاريخ والوقت
 
 <ComponentPreview
   name="calendar-24"
-  title="Date and Time Picker"
-  description="A calendar with date and time picker."
+  title="منتقي التاريخ والوقت"
+  description="تقويم مع منتقي التاريخ والوقت."
 />
 
-### Natural Language Picker
+### منتقي اللغة الطبيعية
 
-This component uses the `chrono-node` library to parse natural language dates.
+يستخدم هذا المكون مكتبة `chrono-node` لتحليل تواريخ اللغة الطبيعية.
 
 <ComponentPreview
   name="calendar-29"
-  title="Natural Language Picker"
-  description="A calendar with natural language picker."
+  title="منتقي اللغة الطبيعية"
+  description="تقويم مع منتقي اللغة الطبيعية."
 />
 
-### Custom Cell Size
+### حجم الخلية المخصص
 
 <ComponentPreview
   name="calendar-18"
-  title="Custom Cell Size"
-  description="A calendar with custom cell size that's responsive."
+  title="حجم الخلية المخصص"
+  description="تقويم بحجم خلية مخصص ومتجاوب."
   className="**:[.preview]:h-[560px]"
 />
 
-You can customize the size of calendar cells using the `--cell-size` CSS variable. You can also make it responsive by using breakpoint-specific values:
+يمكنك تخصيص حجم خلايا التقويم باستخدام متغير CSS `--cell-size`. يمكنك أيضًا جعله متجاوبًا باستخدام قيم خاصة بنقاط التوقف:
 
 ```tsx showLineNumbers
 <Calendar
@@ -201,7 +201,7 @@ You can customize the size of calendar cells using the `--cell-size` CSS variabl
 />
 ```
 
-Or use fixed values:
+أو استخدم قيمًا ثابتة:
 
 ```tsx showLineNumbers
 <Calendar
@@ -212,35 +212,35 @@ Or use fixed values:
 />
 ```
 
-## Upgrade Guide
+## دليل الترقية
 
 ### Tailwind v4
 
-If you're already using Tailwind v4, you can upgrade to the latest version of the `Calendar` component by running the following command:
+إذا كنت تستخدم Tailwind v4 بالفعل، فيمكنك الترقية إلى أحدث إصدار من مكون `Calendar` عن طريق تشغيل الأمر التالي:
 
 ```bash
 npx shadcn@latest add calendar
 ```
 
-When you're prompted to overwrite the existing `Calendar` component, select `Yes`. **If you have made any changes to the `Calendar` component, you will need to merge your changes with the new version.**
+عندما يُطلب منك الكتابة فوق مكون `Calendar` الموجود، حدد `Yes`. **إذا قمت بإجراء أي تغييرات على مكون `Calendar`، فستحتاج إلى دمج تغييراتك مع الإصدار الجديد.**
 
-This will update the `Calendar` component and `react-day-picker` to the latest version.
+سيؤدي هذا إلى تحديث مكون `Calendar` و `react-day-picker` إلى أحدث إصدار.
 
-Next, follow the [React DayPicker](https://daypicker.dev/upgrading) upgrade guide to upgrade your existing components to the latest version.
+بعد ذلك، اتبع دليل ترقية [React DayPicker](https://daypicker.dev/upgrading) لترقية مكوناتك الحالية إلى أحدث إصدار.
 
-#### Installing Blocks
+#### تثبيت الكتل
 
-After upgrading the `Calendar` component, you can install the new blocks by running the `shadcn@latest add` command.
+بعد ترقية مكون `Calendar`، يمكنك تثبيت الكتل الجديدة عن طريق تشغيل الأمر `shadcn@latest add`.
 
 ```bash
 npx shadcn@latest add calendar-02
 ```
 
-This will install the latest version of the calendar blocks.
+سيؤدي هذا إلى تثبيت أحدث إصدار من كتل التقويم.
 
 ### Tailwind v3
 
-If you're using Tailwind v3, you can upgrade to the latest version of the `Calendar` by copying the following code to your `calendar.tsx` file.
+إذا كنت تستخدم Tailwind v3، فيمكنك الترقية إلى أحدث إصدار من `Calendar` عن طريق نسخ الكود التالي إلى ملف `calendar.tsx` الخاص بك.
 
 <CodeCollapsibleWrapper>
 
@@ -462,27 +462,27 @@ export { Calendar, CalendarDayButton }
 
 </CodeCollapsibleWrapper>
 
-**If you have made any changes to the `Calendar` component, you will need to merge your changes with the new version.**
+**إذا قمت بإجراء أي تغييرات على مكون `Calendar`، فستحتاج إلى دمج تغييراتك مع الإصدار الجديد.**
 
-Then follow the [React DayPicker](https://daypicker.dev/upgrading) upgrade guide to upgrade your dependencies and existing components to the latest version.
+ثم اتبع دليل ترقية [React DayPicker](https://daypicker.dev/upgrading) لترقية تبعياتك ومكوناتك الحالية إلى أحدث إصدار.
 
-#### Installing Blocks
+#### تثبيت الكتل
 
-After upgrading the `Calendar` component, you can install the new blocks by running the `shadcn@latest add` command.
+بعد ترقية مكون `Calendar`، يمكنك تثبيت الكتل الجديدة عن طريق تشغيل الأمر `shadcn@latest add`.
 
 ```bash
 npx shadcn@latest add calendar-02
 ```
 
-This will install the latest version of the calendar blocks.
+سيؤدي هذا إلى تثبيت أحدث إصدار من كتل التقويم.
 
-## Changelog
+## سجل التغييرات
 
-### 2025-10-26 Fixed day radius with week numbers
+### 2025-10-26 إصلاح نصف قطر اليوم مع أرقام الأسابيع
 
-We have fixed an issue where the selected day's left border radius was not applied correctly when week numbers were displayed. The fix ensures that when `showWeekNumber` is enabled, the first day (which is the second child due to the week number column) correctly receives the rounded left border.
+لقد أصلحنا مشكلة حيث لم يتم تطبيق نصف قطر الحد الأيسر لليوم المحدد بشكل صحيح عند عرض أرقام الأسابيع. يضمن الإصلاح أنه عند تمكين `showWeekNumber`، فإن اليوم الأول (وهو الطفل الثاني بسبب عمود رقم الأسبوع) يتلقى بشكل صحيح حدًا أيسر مستديرًا.
 
-To apply this fix, edit `components/ui/calendar.tsx` and update the `day` class in `classNames`:
+لتطبيق هذا الإصلاح، قم بتحرير `components/ui/calendar.tsx` وقم بتحديث فئة `day` في `classNames`:
 
 ```tsx showLineNumbers title="components/ui/calendar.tsx" {5-7}
 classNames={{

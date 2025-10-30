@@ -1,18 +1,18 @@
 ---
-title: Button Group
-description: A container that groups related buttons together with consistent styling.
+title: مجموعة الأزرار
+description: حاوية تجمع الأزرار ذات الصلة معًا بتصميم متسق.
 component: true
 ---
 
 <ComponentPreview name="button-group-demo" />
 
-## Installation
+## التثبيت
 
 <CodeTabs>
 
 <TabsList>
   <TabsTrigger value="cli">CLI</TabsTrigger>
-  <TabsTrigger value="manual">Manual</TabsTrigger>
+  <TabsTrigger value="manual">يدوي</TabsTrigger>
 </TabsList>
 <TabsContent value="cli">
 
@@ -26,17 +26,17 @@ npx shadcn@latest add button-group
 
 <Steps>
 
-<Step>Install the following dependencies:</Step>
+<Step>قم بتثبيت التبعيات التالية:</Step>
 
 ```bash
 npm install @radix-ui/react-slot
 ```
 
-<Step>Copy and paste the following code into your project.</Step>
+<Step>انسخ والصق الكود التالي في مشروعك.</Step>
 
 <ComponentSource name="button-group" title="components/ui/button-group.tsx" />
 
-<Step>Update the import paths to match your project setup.</Step>
+<Step>قم بتحديث مسارات الاستيراد لتطابق إعداد مشروعك.</Step>
 
 </Steps>
 
@@ -44,7 +44,7 @@ npm install @radix-ui/react-slot
 
 </CodeTabs>
 
-## Usage
+## الاستخدام
 
 ```tsx
 import {
@@ -56,111 +56,111 @@ import {
 
 ```tsx
 <ButtonGroup>
-  <Button>Button 1</Button>
-  <Button>Button 2</Button>
+  <Button>الزر 1</Button>
+  <Button>الزر 2</Button>
 </ButtonGroup>
 ```
 
-## Accessibility
+## إمكانية الوصول
 
-- The `ButtonGroup` component has the `role` attribute set to `group`.
-- Use <Kbd>Tab</Kbd> to navigate between the buttons in the group.
-- Use `aria-label` or `aria-labelledby` to label the button group.
+- يحتوي مكون `ButtonGroup` على السمة `role` المعينة إلى `group`.
+- استخدم <Kbd>Tab</Kbd> للتنقل بين الأزرار في المجموعة.
+- استخدم `aria-label` أو `aria-labelledby` لتسمية مجموعة الأزرار.
 
 ```tsx showLineNumbers
-<ButtonGroup aria-label="Button group">
-  <Button>Button 1</Button>
-  <Button>Button 2</Button>
+<ButtonGroup aria-label="مجموعة الأزرار">
+  <Button>الزر 1</Button>
+  <Button>الزر 2</Button>
 </ButtonGroup>
 ```
 
-## ButtonGroup vs ToggleGroup
+## ButtonGroup مقابل ToggleGroup
 
-- Use the `ButtonGroup` component when you want to group buttons that perform an action.
-- Use the `ToggleGroup` component when you want to group buttons that toggle a state.
+- استخدم مكون `ButtonGroup` عندما تريد تجميع الأزرار التي تؤدي إجراءً.
+- استخدم مكون `ToggleGroup` عندما تريد تجميع الأزرار التي تبدل حالة.
 
-## Examples
+## أمثلة
 
-### Orientation
+### الاتجاه
 
-Set the `orientation` prop to change the button group layout.
+اضبط خاصية `orientation` لتغيير تخطيط مجموعة الأزرار.
 
 <ComponentPreview name="button-group-orientation" />
 
-### Size
+### الحجم
 
-Control the size of buttons using the `size` prop on individual buttons.
+تحكم في حجم الأزرار باستخدام خاصية `size` على الأزرار الفردية.
 
 <ComponentPreview name="button-group-size" />
 
-### Nested
+### متداخل
 
-Nest `<ButtonGroup>` components to create button groups with spacing.
+قم بتداخل مكونات `<ButtonGroup>` لإنشاء مجموعات أزرار مع تباعد.
 
 <ComponentPreview name="button-group-nested" />
 
-### Separator
+### الفاصل
 
-The `ButtonGroupSeparator` component visually divides buttons within a group.
+يقوم مكون `ButtonGroupSeparator` بتقسيم الأزرار بصريًا داخل مجموعة.
 
-Buttons with variant `outline` do not need a separator since they have a border. For other variants, a separator is recommended to improve the visual hierarchy.
+الأزرار ذات المتغير `outline` لا تحتاج إلى فاصل لأنها تحتوي على حد. بالنسبة للمتغيرات الأخرى، يوصى باستخدام فاصل لتحسين التسلسل الهرمي البصري.
 
 <ComponentPreview name="button-group-separator" />
 
-### Split
+### مقسم
 
-Create a split button group by adding two buttons separated by a `ButtonGroupSeparator`.
+قم بإنشاء مجموعة أزرار مقسمة عن طريق إضافة زرين مفصولين بـ `ButtonGroupSeparator`.
 
 <ComponentPreview name="button-group-split" />
 
-### Input
+### الإدخال
 
-Wrap an `Input` component with buttons.
+قم بلف مكون `Input` بأزرار.
 
 <ComponentPreview name="button-group-input" />
 
-### Input Group
+### مجموعة الإدخال
 
-Wrap an `InputGroup` component to create complex input layouts.
+قم بلف مكون `InputGroup` لإنشاء تخطيطات إدخال معقدة.
 
 <ComponentPreview name="button-group-input-group" />
 
-### Dropdown Menu
+### قائمة منسدلة
 
-Create a split button group with a `DropdownMenu` component.
+قم بإنشاء مجموعة أزرار مقسمة مع مكون `DropdownMenu`.
 
 <ComponentPreview name="button-group-dropdown" />
 
-### Select
+### تحديد
 
-Pair with a `Select` component.
+قم بالاقتران مع مكون `Select`.
 
 <ComponentPreview name="button-group-select" />
 
-### Popover
+### نافذة منبثقة
 
-Use with a `Popover` component.
+استخدم مع مكون `Popover`.
 
 <ComponentPreview name="button-group-popover" />
 
-## API Reference
+## مرجع API
 
 ### ButtonGroup
 
-The `ButtonGroup` component is a container that groups related buttons together with consistent styling.
+مكون `ButtonGroup` هو حاوية تجمع الأزرار ذات الصلة معًا بتصميم متسق.
 
-| Prop          | Type                         | Default        |
+| الخاصية | النوع | الافتراضي |
 | ------------- | ---------------------------- | -------------- |
 | `orientation` | `"horizontal" \| "vertical"` | `"horizontal"` |
 
 ```tsx
 <ButtonGroup>
-  <Button>Button 1</Button>
-  <Button>Button 2</Button>
+  <Button>الزر 1</Button>
+  <Button>الزر 2</Button>
 </ButtonGroup>
 ```
 
-Nest multiple button groups to create complex layouts with spacing. See the [nested](#nested) example for more details.
+قم بتداخل مجموعات أزرار متعددة لإنشاء تخطيطات معقدة مع تباعد. انظر مثال [المتداخل](#nested) لمزيد من التفاصيل.
 
 ```tsx
 <ButtonGroup>
@@ -171,36 +171,36 @@ Nest multiple button groups to create complex layouts with spacing. See the [nes
 
 ### ButtonGroupSeparator
 
-The `ButtonGroupSeparator` component visually divides buttons within a group.
+يقوم مكون `ButtonGroupSeparator` بتقسيم الأزرار بصريًا داخل مجموعة.
 
-| Prop          | Type                         | Default      |
+| الخاصية | النوع | الافتراضي |
 | ------------- | ---------------------------- | ------------ |
 | `orientation` | `"horizontal" \| "vertical"` | `"vertical"` |
 
 ```tsx
 <ButtonGroup>
-  <Button>Button 1</Button>
+  <Button>الزر 1</Button>
   <ButtonGroupSeparator />
-  <Button>Button 2</Button>
+  <Button>الزر 2</Button>
 </ButtonGroup>
 ```
 
 ### ButtonGroupText
 
-Use this component to display text within a button group.
+استخدم هذا المكون لعرض نص داخل مجموعة أزرار.
 
-| Prop      | Type      | Default |
+| الخاصية | النوع | الافتراضي |
 | --------- | --------- | ------- |
 | `asChild` | `boolean` | `false` |
 
 ```tsx
 <ButtonGroup>
-  <ButtonGroupText>Text</ButtonGroupText>
-  <Button>Button</Button>
+  <ButtonGroupText>نص</ButtonGroupText>
+  <Button>زر</Button>
 </ButtonGroup>
 ```
 
-Use the `asChild` prop to render a custom component as the text, for example a label.
+استخدم خاصية `asChild` لعرض مكون مخصص كنص، على سبيل المثال تسمية.
 
 ```tsx showLineNumbers
 import { ButtonGroupText } from "@/components/ui/button-group"
@@ -210,9 +210,9 @@ export function ButtonGroupTextDemo() {
   return (
     <ButtonGroup>
       <ButtonGroupText asChild>
-        <Label htmlFor="name">Text</Label>
+        <Label htmlFor="name">نص</Label>
       </ButtonGroupText>
-      <Input placeholder="Type something here..." id="name" />
+      <Input placeholder="اكتب شيئًا هنا..." id="name" />
     </ButtonGroup>
   )
 }

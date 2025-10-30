@@ -26,7 +26,7 @@ const examples = [
     hidden: false,
   },
   {
-    name: "المصادقة",
+    name: "التسجيل و المصادقة",
     href: "/examples/authentication",
     code: "https://github.com/shadcn/ui/tree/main/apps/v4/app/(app)/examples/authentication",
     hidden: false,

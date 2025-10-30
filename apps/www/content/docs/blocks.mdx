@@ -1,35 +1,35 @@
 ---
-title: Add a block
-description: Contribute components to the blocks library.
+title: إضافة بلوك
+description: ساهم بالمكونات إلى مكتبة البلوكات.
 ---
 
-We are inviting the community to contribute to the [blocks library](/blocks). Share your components and blocks with other developers and help build a library of high-quality, reusable components.
+ندعو المجتمع للمساهمة في [مكتبة البلوكات](/blocks). شارك مكوناتك وبلوكاتك مع مطورين آخرين وساعد في بناء مكتبة مكونات عالية الجودة وقابلة لإعادة الاستخدام.
 
-We'd love to see all types of blocks: applications, marketing, products, and more.
+نرحب بجميع أنواع البلوكات: تطبيقات، تسويق، منتجات، وأكثر.
 
-## Setup your workspace
+## إعداد بيئة العمل
 
 <Steps>
 
-### Fork the repository
+### نسخ المستودع
 
 ```bash
 git clone https://github.com/shadcn-ui/ui.git
 ```
 
-### Create a new branch
+### أنشئ فرعًا جديدًا
 
 ```bash
 git checkout -b username/my-new-block
 ```
 
-### Install dependencies
+### تثبيت التبعيات
 
 ```bash
 pnpm install
 ```
 
-### Start the dev server
+### تشغيل الخادم التطويري
 
 ```bash
 pnpm www:dev
@@ -37,15 +37,15 @@ pnpm www:dev
 
 </Steps>
 
-## Add a block
+## إضافة بلوك
 
-A block can be a single component (eg. a variation of a ui component) or a complex component (eg. a dashboard) with multiple components, hooks, and utils.
+يمكن أن يكون البلوك عبارة عن مكون بسيط (مثال: نسخة معدّلة من مكون واجهة) أو مكون مركب مع عدة عناصر، مثل لوحة تحكم مع مكونات وخطافات وأدوات مساعدة.
 
 <Steps>
 
-### Create a new block
+### أنشئ مجلدًا جديدًا للبلوك
 
-Create a new folder in the `apps/www/registry/new-york/blocks` directory. Make sure the folder is named in kebab-case and under `new-york`.
+قم بإنشاء مجلد جديد في المسار `apps/www/registry/new-york/blocks`. يجب أن يكون اسم المجلد بصيغة kebab-case وتحت مجلد `new-york`.
 
 ```txt
 apps
@@ -58,13 +58,13 @@ apps
 
 <Callout className="mt-6">
 
-**Note:** The build script will take care of building the block for the `default` style.
+**ملاحظة:** برنامج build سيتولى بناء البلوك للنمط الافتراضي.
 
 </Callout>
 
-### Add your block files
+### أضف ملفاتك
 
-Add your files to the block folder. Here is an example of a block with a page, components, hooks, and utils.
+أضف ملفاتك إلى مجلد البلوك. هنا مثال على بلوك به صفحة ومكونات وخطافات ودوال مساعدة.
 
 ```txt
 dashboard-01
@@ -80,21 +80,21 @@ dashboard-01
 
 <Callout className="mt-6">
 
-**Note:** You can start with one file and add more files later.
+**ملاحظة:** يمكنك البدء بملف واحد ثم إضافة المزيد لاحقًا.
 
 </Callout>
 
 </Steps>
 
-## Add your block to the registry
+## أضف البلوك إلى السجل
 
 <Steps>
 
-### Add your block definition to `registry-blocks.tsx`
+### أضف تعريف البلوك إلى `registry-blocks.tsx`
 
-To add your block to the registry, you need to add your block definition to `registry-blocks.ts`.
+لإضافة البلوك إلى السجل يجب إضافة تعريفه لملف `registry-blocks.ts`.
 
-This follows the registry schema at [https://ui.shadcn.com/schema/registry-item.json](https://ui.shadcn.com/schema/registry-item.json).
+يعتمد ذلك على مخطط السجل المشروح هنا: [https://ui.shadcn.com/schema/registry-item.json](https://ui.shadcn.com/schema/registry-item.json).
 
 ```tsx title="apps/www/registry/registry-blocks.tsx"
 export const blocks = [
@@ -102,8 +102,8 @@ export const blocks = [
   {
     name: "dashboard-01",
     author: "shadcn (https://ui.shadcn.com)",
-    title: "Dashboard",
-    description: "A simple dashboard with a hello world component.",
+    title: "لوحة تحكم",
+    description: "لوحة تحكم بسيطة مع مكون hello world.",
     type: "registry:block",
     registryDependencies: ["input", "button", "card"],
     dependencies: ["zod"],
@@ -135,9 +135,9 @@ export const blocks = [
 ]
 ```
 
-Make sure you add a name, description, type, registryDependencies, dependencies, files, and categories. We'll go over each of these in more detail in the schema docs (coming soon).
+تأكد من إضافة اسم، وصف، نوع، تبعيات السجل، تبعيات، ملفات، وتصنيفات. سنناقش كل خاصية في وثائق المخطط (قريبًا).
 
-### Run the build script
+### شغل سكربت البناء
 
 ```bash
 pnpm registry:build
@@ -145,50 +145,50 @@ pnpm registry:build
 
 <Callout className="mt-6">
 
-**Note:** you do not need to run this script for every change. You only need to run it when you update the block definition.
+**ملاحظة:** لست بحاجة لتشغيل هذا السكربت في كل مرة تعدّل فيها الملفات، فقط عند تحديث تعريف البلوك.
 
 </Callout>
 
-### View your block
+### استعرض البلوك الخاص بك
 
-Once the build script is finished, you can view your block at `http://localhost:3333/blocks/[CATEGORY]` or a full screen preview at `http://localhost:3333/view/styles/new-york/dashboard-01`.
+بعد انتهاء السكربت يمكنك استعراض البلوك على `http://localhost:3333/blocks/[CATEGORY]` أو عرض كامل الصفحة من خلال `http://localhost:3333/view/styles/new-york/dashboard-01`.
 
 <Image
   src="/images/block-preview-light.png"
   width="1432"
   height="960"
-  alt="Block preview"
+  alt="معاينة البلوك"
   className="border dark:hidden shadow-sm rounded-lg overflow-hidden mt-6 w-full"
 />
 <Image
   src="/images/block-preview-dark.png"
   width="1432"
   height="960"
-  alt="Block preview"
+  alt="معاينة البلوك (داكن)"
   className="border hidden dark:block shadow-sm rounded-lg overflow-hidden mt-6 w-full"
 />
 
-### Build your block
+### بناء البلوك
 
-You can now build your block by editing the files in the block folder and viewing the changes in the browser.
+يمكنك الآن بناء البلوك من خلال تعديل الملفات الموجودة في مجلد البلوك ومتابعة التغيرات في المتصفح.
 
-If you add more files, make sure to add them to the `files` array in the block definition.
+إذا أضفت ملفات جديدة تأكد من إضافتها إلى مصفوفة `files` في تعريف البلوك.
 
 </Steps>
 
-## Publish your block
+## نشر البلوك
 
-Once you're ready to publish your block, you can submit a pull request to the main repository.
+عند الانتهاء من تطوير البلوك يمكنك إرسال Pull Request إلى المستودع الرئيسي.
 
 <Steps>
 
-### Run the build script
+### شغل سكربت البناء
 
 ```bash
 pnpm registry:build
 ```
 
-### Capture a screenshot
+### التقط صورة للبلوك
 
 ```bash
 pnpm registry:capture
@@ -196,25 +196,25 @@ pnpm registry:capture
 
 <Callout className="mt-6">
 
-**Note:** If you've run the capture script before, you might need to delete the existing screenshots (both light and dark) at `apps/www/public/r/styles/new-york` and run the script again.
+**ملاحظة:** إذا شغلت السكربت من قبل قد تحتاج لحذف الصور القديمة من `apps/www/public/r/styles/new-york` وتشغيل السكربت مرة أخرى.
 
 </Callout>
 
-### Submit a pull request
+### إرسال Pull Request
 
-Commit your changes and submit a pull request to the main repository.
+قم برفع تغييراتك وأرسل Pull Request إلى المستودع الرئيسي.
 
-Your block will be reviewed and merged. Once merged it will be published to the website and available to be installed via the CLI.
+سيتم مراجعة دمج البلوك وبعدها يظهر في الموقع ويمكن تثبيته عبر أداة CLI.
 
 </Steps>
 
-## Categories
+## التصنيفات
 
-The `categories` property is used to organize your block in the registry.
+خاصية `categories` تُستخدم لتنظيم البلوك داخل السجل.
 
-### Add a category
+### إضافة تصنيف
 
-If you need to add a new category, you can do so by adding it to the `registryCategories` array in `apps/www/registry/registry-categories.ts`.
+لإضافة تصنيف جديد أضفه إلى مصفوفة `registryCategories` في `apps/www/registry/registry-categories.ts`.
 
 ```tsx title="apps/www/registry/registry-categories.ts"
 export const registryCategories = [
@@ -227,12 +227,12 @@ export const registryCategories = [
 ]
 ```
 
-## Guidelines
+## إرشادات
 
-Here are some guidelines to follow when contributing to the blocks library.
+فيما يلي بعض الإرشادات عند المساهمة في مكتبة البلوكات:
 
-- The following properties are required for the block definition: `name`, `description`, `type`, `files`, and `categories`.
-- Make sure to list all registry dependencies in `registryDependencies`. A registry dependency is the name of the component in the registry eg. `input`, `button`, `card`, etc.
-- Make sure to list all dependencies in `dependencies`. A dependency is the name of the package in the registry eg. `zod`, `sonner`, etc.
-- If your block has a page (optional), it should be the first entry in the `files` array and it should have a `target` property. This helps the CLI place the page in the correct location for file-based routing.
-- **Imports should always use the `@/registry` path.** eg. `import { Input } from "@/registry/new-york/input"`
+- الخصائص المطلوبة لتعريف البلوك: `name`، `description`، `type`، `files`، و `categories`.
+- تأكد من إدراج جميع تبعيات السجل ضمن `registryDependencies`، مثل اسم المكون في السجل (مثال: input، button، card).
+- تأكد من ذكر جميع التبعيات في `dependencies` (اسم الحزمة مثل zod، sonner...).
+- إذا كان للبلوك صفحة (اختياري)، يجب أن تكون أول عنصر في مصفوفة `files` ولها خاصية `target` لمساعدة أداة CLI على وضعها في المكان الصحيح.
+- **يجب أن تستخدم الاستيرادات دومًا مسار `@/registry`.** مثال: `import { Input } from "@/registry/new-york/input"`

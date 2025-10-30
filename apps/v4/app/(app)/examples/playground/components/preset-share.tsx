@@ -13,19 +13,18 @@ export function PresetShare() {
   return (
     <Popover>
       <PopoverTrigger asChild>
-        <Button variant="secondary">Share</Button>
+        <Button variant="secondary">مشاركة</Button>
       </PopoverTrigger>
       <PopoverContent align="end" className="flex w-[520px] flex-col gap-4">
         <div className="flex flex-col gap-1 text-center sm:text-left">
-          <h3 className="text-lg font-semibold">Share preset</h3>
+          <h3 className="text-lg font-semibold">مشاركة الإعداد المسبق</h3>
           <p className="text-muted-foreground text-sm">
-            Anyone who has this link and an OpenAI account will be able to view
-            this.
+            سيتمكن أي شخص لديه هذا الرابط وحساب OpenAI من عرضه.
           </p>
         </div>
         <div className="relative flex-1">
           <Label htmlFor="link" className="sr-only">
-            Link
+            الرابط
           </Label>
           <Input
             id="link"
@@ -39,7 +38,7 @@ export function PresetShare() {
             variant="ghost"
             className="absolute top-1 right-1 size-7"
           >
-            <span className="sr-only">Copy</span>
+            <span className="sr-only">نسخ</span>
             <Copy className="size-3.5" />
           </Button>
         </div>

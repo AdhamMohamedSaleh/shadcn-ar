@@ -24,7 +24,7 @@ export function MaxLengthSelector({ defaultValue }: MaxLengthSelectorProps) {
         <HoverCardTrigger asChild>
           <div className="grid gap-4">
             <div className="flex items-center justify-between">
-              <Label htmlFor="maxlength">Maximum Length</Label>
+              <Label htmlFor="maxlength">الطول الأقصى</Label>
               <span className="text-muted-foreground hover:border-border w-12 rounded-md border border-transparent px-2 py-0.5 text-right text-sm">
                 {value}
               </span>
@@ -35,7 +35,7 @@ export function MaxLengthSelector({ defaultValue }: MaxLengthSelectorProps) {
               defaultValue={value}
               step={10}
               onValueChange={setValue}
-              aria-label="Maximum Length"
+              aria-label="الطول الأقصى"
             />
           </div>
         </HoverCardTrigger>
@@ -44,9 +44,7 @@ export function MaxLengthSelector({ defaultValue }: MaxLengthSelectorProps) {
           className="w-[260px] text-sm"
           side="left"
         >
-          The maximum number of tokens to generate. Requests can use up to 2,048
-          or 4,000 tokens, shared between prompt and completion. The exact limit
-          varies by model.
+          الحد الأقصى لعدد التوكنات التي سيتم إنشاؤها. يمكن أن تستخدم الطلبات ما يصل إلى 2048 أو 4000 توكن، مشتركة بين المطالبة والإكمال. يختلف الحد الدقيق حسب النموذج.
         </HoverCardContent>
       </HoverCard>
     </div>

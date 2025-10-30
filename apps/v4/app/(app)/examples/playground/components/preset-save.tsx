@@ -16,28 +16,27 @@ export function PresetSave() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="secondary">Save</Button>
+        <Button variant="secondary">حفظ</Button>
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Save preset</DialogTitle>
+          <DialogTitle>حفظ الإعداد المسبق</DialogTitle>
           <DialogDescription>
-            This will save the current playground state as a preset which you
-            can access later or share with others.
+            سيؤدي هذا إلى حفظ حالة ساحة اللعب الحالية كإعداد مسبق يمكنك الوصول إليه لاحقًا أو مشاركته مع الآخرين.
           </DialogDescription>
         </DialogHeader>
         <div className="grid gap-6 py-4">
           <div className="grid gap-3">
-            <Label htmlFor="name">Name</Label>
+            <Label htmlFor="name">الاسم</Label>
             <Input id="name" autoFocus />
           </div>
           <div className="grid gap-3">
-            <Label htmlFor="description">Description</Label>
+            <Label htmlFor="description">الوصف</Label>
             <Textarea id="description" />
           </div>
         </div>
         <DialogFooter>
-          <Button type="submit">Save</Button>
+          <Button type="submit">حفظ</Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>

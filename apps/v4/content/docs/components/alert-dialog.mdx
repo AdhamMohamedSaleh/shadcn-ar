@@ -1,6 +1,6 @@
 ---
-title: Alert Dialog
-description: A modal dialog that interrupts the user with important content and expects a response.
+title: مربع حوار التنبيه
+description: مربع حوار مشروط يقطع تفاعل المستخدم بمحتوى مهم ويتوقع استجابة.
 featured: true
 component: true
 links:
@@ -10,17 +10,17 @@ links:
 
 <ComponentPreview
   name="alert-dialog-demo"
-  title="An alert dialog with cancel and continue buttons."
-  description="An alert dialog with cancel and continue buttons."
+  title="مربع حوار تنبيه مع أزرار الإلغاء والمتابعة."
+  description="مربع حوار تنبيه مع أزرار الإلغاء والمتابعة."
 />
 
-## Installation
+## التثبيت
 
 <CodeTabs>
 
 <TabsList>
   <TabsTrigger value="cli">CLI</TabsTrigger>
-  <TabsTrigger value="manual">Manual</TabsTrigger>
+  <TabsTrigger value="manual">يدوي</TabsTrigger>
 </TabsList>
 <TabsContent value="cli">
 
@@ -34,17 +34,17 @@ npx shadcn@latest add alert-dialog
 
 <Steps>
 
-<Step>Install the following dependencies:</Step>
+<Step>قم بتثبيت التبعيات التالية:</Step>
 
 ```bash
 npm install @radix-ui/react-alert-dialog
 ```
 
-<Step>Copy and paste the following code into your project.</Step>
+<Step>انسخ والصق الكود التالي في مشروعك.</Step>
 
 <ComponentSource name="alert-dialog" title="components/ui/alert-dialog.tsx" />
 
-<Step>Update the import paths to match your project setup.</Step>
+<Step>قم بتحديث مسارات الاستيراد لتطابق إعداد مشروعك.</Step>
 
 </Steps>
 
@@ -52,7 +52,7 @@ npm install @radix-ui/react-alert-dialog
 
 </CodeTabs>
 
-## Usage
+## الاستخدام
 
 ```tsx showLineNumbers
 import {
@@ -70,18 +70,17 @@ import {
 
 ```tsx showLineNumbers
 <AlertDialog>
-  <AlertDialogTrigger>Open</AlertDialogTrigger>
+  <AlertDialogTrigger>فتح</AlertDialogTrigger>
   <AlertDialogContent>
     <AlertDialogHeader>
-      <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+      <AlertDialogTitle>هل أنت متأكد تمامًا؟</AlertDialogTitle>
       <AlertDialogDescription>
-        This action cannot be undone. This will permanently delete your account
-        and remove your data from our servers.
+        لا يمكن التراجع عن هذا الإجراء. سيؤدي هذا إلى حذف حسابك نهائيًا وإزالة بياناتك من خوادمنا.
       </AlertDialogDescription>
     </AlertDialogHeader>
     <AlertDialogFooter>
-      <AlertDialogCancel>Cancel</AlertDialogCancel>
-      <AlertDialogAction>Continue</AlertDialogAction>
+      <AlertDialogCancel>إلغاء</AlertDialogCancel>
+      <AlertDialogAction>متابعة</AlertDialogAction>
     </AlertDialogFooter>
   </AlertDialogContent>
 </AlertDialog>

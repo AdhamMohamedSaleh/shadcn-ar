@@ -43,15 +43,14 @@ export function ModelSelector({ models, types, ...props }: ModelSelectorProps) {
     <div className="grid gap-3">
       <HoverCard openDelay={200}>
         <HoverCardTrigger asChild>
-          <Label htmlFor="model">Model</Label>
+          <Label htmlFor="model">النموذج</Label>
         </HoverCardTrigger>
         <HoverCardContent
           align="start"
           className="w-[260px] text-sm"
           side="left"
         >
-          The model which will generate the completion. Some models are suitable
-          for natural language tasks, others specialize in code. Learn more.
+          النموذج الذي سيقوم بإنشاء الإكمال. بعض النماذج مناسبة لمهام اللغة الطبيعية، والبعض الآخر متخصص في الكود. تعلم المزيد.
         </HoverCardContent>
       </HoverCard>
       <Popover open={open} onOpenChange={setOpen} {...props}>
@@ -60,10 +59,10 @@ export function ModelSelector({ models, types, ...props }: ModelSelectorProps) {
             variant="outline"
             role="combobox"
             aria-expanded={open}
-            aria-label="Select a model"
+            aria-label="اختر نموذجًا"
             className="w-full justify-between"
           >
-            {selectedModel ? selectedModel.name : "Select a model..."}
+            {selectedModel ? selectedModel.name : "اختر نموذجًا..."}
             <ChevronsUpDown className="text-muted-foreground" />
           </Button>
         </PopoverTrigger>
@@ -83,7 +82,7 @@ export function ModelSelector({ models, types, ...props }: ModelSelectorProps) {
                 {peekedModel.strengths ? (
                   <div className="mt-4 grid gap-2">
                     <h5 className="text-sm leading-none font-medium">
-                      Strengths
+                      نقاط القوة
                     </h5>
                     <ul className="text-muted-foreground text-sm">
                       {peekedModel.strengths}
@@ -94,8 +93,8 @@ export function ModelSelector({ models, types, ...props }: ModelSelectorProps) {
             </HoverCardContent>
             <Command loop>
               <CommandList className="h-(--cmdk-list-height) max-h-[400px]">
-                <CommandInput placeholder="Search Models..." />
-                <CommandEmpty>No Models found.</CommandEmpty>
+                <CommandInput placeholder="ابحث عن نماذج..." />
+                <CommandEmpty>لم يتم العثور على نماذج.</CommandEmpty>
                 <HoverCardTrigger />
                 {types.map((type) => (
                   <CommandGroup key={type} heading={type}>

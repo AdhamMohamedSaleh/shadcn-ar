@@ -42,53 +42,50 @@ export function PresetActions() {
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button variant="secondary" size="icon">
-            <span className="sr-only">Actions</span>
+            <span className="sr-only">الإجراءات</span>
             <MoreHorizontal />
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end">
           <DropdownMenuItem onSelect={() => setIsOpen(true)}>
-            Content filter preferences
+            تفضيلات مرشح المحتوى
           </DropdownMenuItem>
           <DropdownMenuSeparator />
           <DropdownMenuItem
             onSelect={() => setShowDeleteDialog(true)}
             className="text-red-600"
           >
-            Delete preset
+            حذف الإعداد المسبق
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
       <Dialog open={open} onOpenChange={setIsOpen}>
         <DialogContent>
           <DialogHeader>
-            <DialogTitle>Content filter preferences</DialogTitle>
+            <DialogTitle>تفضيلات مرشح المحتوى</DialogTitle>
             <DialogDescription>
-              The content filter flags text that may violate our content policy.
-              It&apos;s powered by our moderation endpoint which is free to use
-              to moderate your OpenAI API traffic. Learn more.
+              يقوم مرشح المحتوى بالإبلاغ عن النصوص التي قد تنتهك سياسة المحتوى الخاصة بنا. إنه مدعوم بنقطة نهاية الإشراف لدينا وهي مجانية للاستخدام للإشراف على حركة مرور واجهة برمجة تطبيقات OpenAI الخاصة بك. تعلم المزيد.
             </DialogDescription>
           </DialogHeader>
           <div className="py-6">
             <h4 className="text-muted-foreground text-sm">
-              Playground Warnings
+              تحذيرات ساحة اللعب
             </h4>
             <div className="flex items-start justify-between gap-4 pt-3">
               <Switch name="show" id="show" defaultChecked={true} />
               <Label className="grid gap-1 font-normal" htmlFor="show">
                 <span className="font-semibold">
-                  Show a warning when content is flagged
+                  إظهار تحذير عند الإبلاغ عن المحتوى
                 </span>
                 <span className="text-muted-foreground text-sm">
-                  A warning will be shown when sexual, hateful, violent or
-                  self-harm content is detected.
+                  سيظهر تحذير عند اكتشاف محتوى جنسي أو بغيض أو عنيف أو ضار بالنفس.
                 </span>
               </Label>
             </div>
           </div>
           <DialogFooter>
             <DialogClose asChild>
-              <Button variant="secondary">Close</Button>
+              <Button variant="secondary">إغلاق</Button>
             </DialogClose>
           </DialogFooter>
         </DialogContent>
@@ -96,22 +93,21 @@ export function PresetActions() {
       <AlertDialog open={showDeleteDialog} onOpenChange={setShowDeleteDialog}>
         <AlertDialogContent>
           <AlertDialogHeader>
-            <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+            <AlertDialogTitle>هل أنت متأكد تمامًا؟</AlertDialogTitle>
             <AlertDialogDescription>
-              This action cannot be undone. This preset will no longer be
-              accessible by you or others you&apos;ve shared it with.
+              لا يمكن التراجع عن هذا الإجراء. لن يكون هذا الإعداد المسبق متاحًا لك أو للآخرين الذين شاركته معهم.
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogCancel>Cancel</AlertDialogCancel>
+            <AlertDialogCancel>إلغاء</AlertDialogCancel>
             <Button
               variant="destructive"
               onClick={() => {
                 setShowDeleteDialog(false)
-                toast.success("This preset has been deleted.")
+                toast.success("تم حذف هذا الإعداد المسبق.")
               }}
             >
-              Delete
+              حذف
             </Button>
           </AlertDialogFooter>
         </AlertDialogContent>

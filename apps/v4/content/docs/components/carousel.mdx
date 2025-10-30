@@ -1,6 +1,6 @@
 ---
-title: Carousel
-description: A carousel with motion and swipe built using Embla.
+title: دائري
+description: دائري مع حركة وانتقاد مبني باستخدام Embla.
 component: true
 links:
   doc: https://www.embla-carousel.com/get-started/react
@@ -9,21 +9,21 @@ links:
 
 <ComponentPreview
   name="carousel-demo"
-  title="Carousel"
-  description="A carousel with 5 items and a previous and next button."
+  title="دائري"
+  description="دائري بخمسة عناصر وزر سابق وتالي."
 />
 
-## About
+## حول
 
-The carousel component is built using the [Embla Carousel](https://www.embla-carousel.com/) library.
+مكون الدائري مبني باستخدام مكتبة [Embla Carousel](https://www.embla-carousel.com/).
 
-## Installation
+## التثبيت
 
 <CodeTabs>
 
 <TabsList>
   <TabsTrigger value="cli">CLI</TabsTrigger>
-  <TabsTrigger value="manual">Manual</TabsTrigger>
+  <TabsTrigger value="manual">يدوي</TabsTrigger>
 </TabsList>
 
 <TabsContent value="cli">
@@ -38,17 +38,17 @@ npx shadcn@latest add carousel
 
 <Steps>
 
-<Step>Install the following dependencies:</Step>
+<Step>قم بتثبيت التبعيات التالية:</Step>
 
 ```bash
 npm install embla-carousel-react
 ```
 
-<Step>Copy and paste the following code into your project.</Step>
+<Step>انسخ والصق الكود التالي في مشروعك.</Step>
 
 <ComponentSource name="carousel" title="components/ui/carousel.tsx" />
 
-<Step>Update the import paths to match your project setup.</Step>
+<Step>قم بتحديث مسارات الاستيراد لتطابق إعداد مشروعك.</Step>
 
 </Steps>
 
@@ -56,7 +56,7 @@ npm install embla-carousel-react
 
 </CodeTabs>
 
-## Usage
+## الاستخدام
 
 ```tsx showLineNumbers
 import {
@@ -80,20 +80,20 @@ import {
 </Carousel>
 ```
 
-## Examples
+## أمثلة
 
-### Sizes
+### الأحجام
 
-To set the size of the items, you can use the `basis` utility class on the `<CarouselItem />`.
+لتعيين حجم العناصر، يمكنك استخدام فئة `basis` المساعدة على `<CarouselItem />`.
 
 <ComponentPreview
   name="carousel-size"
-  title="Carousel"
-  description="A carousel with 3 active items of equal size."
+  title="دائري"
+  description="دائري بثلاثة عناصر نشطة متساوية الحجم."
 />
 
 ```tsx showLineNumbers {4-6}
-// 33% of the carousel width.
+// 33% من عرض الدائري.
 <Carousel>
   <CarouselContent>
     <CarouselItem className="basis-1/3">...</CarouselItem>
@@ -104,7 +104,7 @@ To set the size of the items, you can use the `basis` utility class on the `<Car
 ```
 
 ```tsx showLineNumbers {4-6}
-// 50% on small screens and 33% on larger screens.
+// 50% على الشاشات الصغيرة و 33% على الشاشات الأكبر.
 <Carousel>
   <CarouselContent>
     <CarouselItem className="md:basis-1/2 lg:basis-1/3">...</CarouselItem>
@@ -114,24 +114,22 @@ To set the size of the items, you can use the `basis` utility class on the `<Car
 </Carousel>
 ```
 
-### Spacing
+### التباعد
 
-To set the spacing between the items, we use a `pl-[VALUE]` utility on the `<CarouselItem />` and a negative `-ml-[VALUE]` on the `<CarouselContent />`.
+لتعيين التباعد بين العناصر، نستخدم فئة `pl-[VALUE]` المساعدة على `<CarouselItem />` و `-ml-[VALUE]` سالبة على `<CarouselContent />`.
 
 <Callout className="mt-6">
-  **Why:** I tried to use the `gap` property or a `grid` layout on the `
-  <CarouselContent />` but it required a lot of math and mental effort to get the
-  spacing right. I found `pl-[VALUE]` and `-ml-[VALUE]` utilities much easier to
-  use.
+  **لماذا:** حاولت استخدام خاصية `gap` أو تخطيط `grid` على `
+  <CarouselContent />` لكنه تطلب الكثير من الحساب والجهد الذهني للحصول على التباعد الصحيح. وجدت أن فئات `pl-[VALUE]` و `-ml-[VALUE]` المساعدة أسهل بكثير في الاستخدام.
 
-You can always adjust this in your own project if you need to.
+يمكنك دائمًا ضبط هذا في مشروعك الخاص إذا احتجت إلى ذلك.
 
 </Callout>
 
 <ComponentPreview
   name="carousel-spacing"
-  title="Carousel"
-  description="A carousel with 3 items with a spacing of 1rem."
+  title="دائري"
+  description="دائري بثلاثة عناصر بتباعد 1rem."
 />
 
 ```tsx showLineNumbers /-ml-4/ /pl-4/
@@ -154,14 +152,14 @@ You can always adjust this in your own project if you need to.
 </Carousel>
 ```
 
-### Orientation
+### الاتجاه
 
-Use the `orientation` prop to set the orientation of the carousel.
+استخدم خاصية `orientation` لتعيين اتجاه الدائري.
 
 <ComponentPreview
   name="carousel-orientation"
-  title="Carousel"
-  description="A vertical carousel."
+  title="دائري"
+  description="دائري عمودي."
 />
 
 ```tsx showLineNumbers /vertical | horizontal/
@@ -174,9 +172,9 @@ Use the `orientation` prop to set the orientation of the carousel.
 </Carousel>
 ```
 
-## Options
+## الخيارات
 
-You can pass options to the carousel using the `opts` prop. See the [Embla Carousel docs](https://www.embla-carousel.com/api/options/) for more information.
+يمكنك تمرير الخيارات إلى الدائري باستخدام خاصية `opts`. راجع [وثائق Embla Carousel](https://www.embla-carousel.com/api/options/) لمزيد من المعلومات.
 
 ```tsx showLineNumbers {2-5}
 <Carousel
@@ -195,12 +193,12 @@ You can pass options to the carousel using the `opts` prop. See the [Embla Carou
 
 ## API
 
-Use a state and the `setApi` props to get an instance of the carousel API.
+استخدم حالة وخاصية `setApi` للحصول على مثيل لواجهة برمجة تطبيقات الدائري.
 
 <ComponentPreview
   name="carousel-api"
-  title="Carousel"
-  description="A carousel with a slide counter."
+  title="دائري"
+  description="دائري مع عداد شرائح."
 />
 
 ```tsx showLineNumbers {1,4,22}
@@ -236,9 +234,9 @@ export function Example() {
 }
 ```
 
-## Events
+## الأحداث
 
-You can listen to events using the api instance from `setApi`.
+يمكنك الاستماع إلى الأحداث باستخدام مثيل api من `setApi`.
 
 ```tsx showLineNumbers {1,4-14,16}
 import { type CarouselApi } from "@/components/ui/carousel"
@@ -252,7 +250,7 @@ export function Example() {
     }
 
     api.on("select", () => {
-      // Do something on select.
+      // افعل شيئًا عند التحديد.
     })
   }, [api])
 
@@ -268,11 +266,11 @@ export function Example() {
 }
 ```
 
-See the [Embla Carousel docs](https://www.embla-carousel.com/api/events/) for more information on using events.
+راجع [وثائق Embla Carousel](https://www.embla-carousel.com/api/events/) لمزيد من المعلومات حول استخدام الأحداث.
 
-## Plugins
+## الإضافات
 
-You can use the `plugins` prop to add plugins to the carousel.
+يمكنك استخدام خاصية `plugins` لإضافة إضافات إلى الدائري.
 
 ```ts showLineNumbers {1,6-10}
 import Autoplay from "embla-carousel-autoplay"
@@ -294,8 +292,8 @@ export function Example() {
 
 <ComponentPreview
   name="carousel-plugin"
-  title="Carousel"
-  description="A carousel with the autoplay plugin."
+  title="دائري"
+  description="دائري مع إضافة التشغيل التلقائي."
 />
 
-See the [Embla Carousel docs](https://www.embla-carousel.com/api/plugins/) for more information on using plugins.
+راجع [وثائق Embla Carousel](https://www.embla-carousel.com/api/plugins/) لمزيد من المعلومات حول استخدام الإضافات.

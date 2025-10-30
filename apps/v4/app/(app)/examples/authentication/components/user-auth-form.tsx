@@ -35,7 +35,7 @@ export function UserAuthForm({
         <FieldGroup>
           <Field>
             <FieldLabel className="sr-only" htmlFor="email">
-              Email
+              البريد الإلكتروني
             </FieldLabel>
             <Input
               id="email"
@@ -50,12 +50,12 @@ export function UserAuthForm({
           <Field>
             <Button disabled={isLoading}>
               {isLoading && <Spinner />}
-              Sign In with Email
+              تسجيل الدخول بالبريد الإلكتروني
             </Button>
           </Field>
         </FieldGroup>
       </form>
-      <FieldSeparator>Or continue with</FieldSeparator>
+      <FieldSeparator>أو المتابعة باستخدام</FieldSeparator>
       <Button variant="outline" type="button" disabled={isLoading}>
         {isLoading ? <Spinner /> : <Icons.gitHub className="mr-2 h-4 w-4" />}{" "}
         GitHub

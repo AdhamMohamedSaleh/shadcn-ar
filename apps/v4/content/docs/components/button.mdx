@@ -1,6 +1,6 @@
 ---
-title: Button
-description: Displays a button or a component that looks like a button.
+title: زر
+description: يعرض زرًا أو مكونًا يشبه الزر.
 featured: true
 component: true
 ---
@@ -8,28 +8,26 @@ component: true
 import { InfoIcon } from "lucide-react"
 
 <Callout variant="info" icon={<InfoIcon />}>
-**Updated:** We have updated the button component to add new sizes: `icon-sm` and `icon-lg`. See the
-[changelog](/docs/components/button#changelog) for more details. Follow the
-instructions to update your project.
+**محدث:** لقد قمنا بتحديث مكون الزر لإضافة أحجام جديدة: `icon-sm` و `icon-lg`. انظر [سجل التغييرات](/docs/components/button#changelog) لمزيد من التفاصيل. اتبع التعليمات لتحديث مشروعك.
 
 </Callout>
 
-<ComponentPreview name="button-demo" description="A button" className="mb-4" />
+<ComponentPreview name="button-demo" description="زر" className="mb-4" />
 
 ```tsx showLineNumbers
-<Button variant="outline">Button</Button>
-<Button variant="outline" size="icon" aria-label="Submit">
+<Button variant="outline">زر</Button>
+<Button variant="outline" size="icon" aria-label="إرسال">
   <ArrowUpIcon />
 </Button>
 ```
 
-## Installation
+## التثبيت
 
 <CodeTabs>
 
 <TabsList>
   <TabsTrigger value="cli">CLI</TabsTrigger>
-  <TabsTrigger value="manual">Manual</TabsTrigger>
+  <TabsTrigger value="manual">يدوي</TabsTrigger>
 </TabsList>
 <TabsContent value="cli">
 
@@ -43,17 +41,17 @@ npx shadcn@latest add button
 
 <Steps>
 
-<Step>Install the following dependencies:</Step>
+<Step>قم بتثبيت التبعيات التالية:</Step>
 
 ```bash
 npm install @radix-ui/react-slot
 ```
 
-<Step>Copy and paste the following code into your project.</Step>
+<Step>انسخ والصق الكود التالي في مشروعك.</Step>
 
 <ComponentSource name="button" title="components/ui/button.tsx" />
 
-<Step>Update the import paths to match your project setup.</Step>
+<Step>قم بتحديث مسارات الاستيراد لتطابق إعداد مشروعك.</Step>
 
 </Steps>
 
@@ -61,21 +59,21 @@ npm install @radix-ui/react-slot
 
 </CodeTabs>
 
-## Usage
+## الاستخدام
 
 ```tsx
 import { Button } from "@/components/ui/button"
 ```
 
 ```tsx
-<Button variant="outline">Button</Button>
+<Button variant="outline">زر</Button>
 ```
 
-## Cursor
+## المؤشر
 
-Tailwind v4 [switched](https://tailwindcss.com/docs/upgrade-guide#buttons-use-the-default-cursor) from `cursor: pointer` to `cursor: default` for the button component.
+Tailwind v4 [تحول](https://tailwindcss.com/docs/upgrade-guide#buttons-use-the-default-cursor) من `cursor: pointer` إلى `cursor: default` لمكون الزر.
 
-If you want to keep the `cursor: pointer` behavior, add the following code to your CSS file:
+إذا كنت ترغب في الحفاظ على سلوك `cursor: pointer`، أضف الكود التالي إلى ملف CSS الخاص بك:
 
 ```css showLineNumbers title="globals.css"
 @layer base {
@@ -86,138 +84,137 @@ If you want to keep the `cursor: pointer` behavior, add the following code to yo
 }
 ```
 
-## Examples
+## أمثلة
 
-### Size
+### الحجم
 
 <ComponentPreview name="button-size" className="mb-4" />
 
 ```tsx
-// Small
-<Button size="sm" variant="outline">Small</Button>
-<Button size="icon-sm" aria-label="Submit" variant="outline">
+// صغير
+<Button size="sm" variant="outline">صغير</Button>
+<Button size="icon-sm" aria-label="إرسال" variant="outline">
   <ArrowUpRightIcon />
 </Button>
 
-// Medium
-<Button variant="outline">Default</Button>
-<Button size="icon" aria-label="Submit" variant="outline">
+// متوسط
+<Button variant="outline">افتراضي</Button>
+<Button size="icon" aria-label="إرسال" variant="outline">
   <ArrowUpRightIcon />
 </Button>
 
-// Large
-<Button size="lg" variant="outline">Large</Button>
-<Button size="icon-lg" aria-label="Submit" variant="outline">
+// كبير
+<Button size="lg" variant="outline">كبير</Button>
+<Button size="icon-lg" aria-label="إرسال" variant="outline">
   <ArrowUpRightIcon />
 </Button>
 ```
 
-### Default
+### افتراضي
 
 <ComponentPreview
   name="button-default"
-  description="A primary button"
+  description="زر أساسي"
   className="mb-4"
 />
 
 ```tsx
-<Button>Button</Button>
+<Button>زر</Button>
 ```
 
-### Outline
+### مخطط
 
 <ComponentPreview
   name="button-outline"
-  description="A button using the outline variant."
+  description="زر يستخدم متغير المخطط."
   className="mb-4"
 />
 
 ```tsx
-<Button variant="outline">Outline</Button>
+<Button variant="outline">مخطط</Button>
 ```
 
-### Secondary
+### ثانوي
 
 <ComponentPreview
   name="button-secondary"
-  description="A secondary button"
+  description="زر ثانوي"
   className="mb-4"
 />
 
 ```tsx
-<Button variant="secondary">Secondary</Button>
+<Button variant="secondary">ثانوي</Button>
 ```
 
-### Ghost
+### شبح
 
 <ComponentPreview
   name="button-ghost"
-  description="A button using the ghost variant"
+  description="زر يستخدم متغير الشبح"
   className="mb-4"
 />
 
 ```tsx
-<Button variant="ghost">Ghost</Button>
+<Button variant="ghost">شبح</Button>
 ```
 
-### Destructive
+### تدميري
 
 <ComponentPreview
   name="button-destructive"
-  description="A destructive button"
+  description="زر تدميري"
   className="mb-4"
 />
 
 ```tsx
-<Button variant="destructive">Destructive</Button>
+<Button variant="destructive">تدميري</Button>
 ```
 
-### Link
+### رابط
 
 <ComponentPreview
   name="button-link"
-  description="A button using the link variant."
+  description="زر يستخدم متغير الرابط."
   className="mb-4"
 />
 
 ```tsx
-<Button variant="link">Link</Button>
+<Button variant="link">رابط</Button>
 ```
 
-### Icon
+### أيقونة
 
 <ComponentPreview
   name="button-icon"
-  description="An icon button"
+  description="زر أيقونة"
   className="mb-4"
 />
 
 ```tsx showLineNumbers
-<Button variant="outline" size="icon" aria-label="Submit">
+<Button variant="outline" size="icon" aria-label="إرسال">
   <CircleFadingArrowUpIcon />
 </Button>
 ```
 
-### With Icon
+### مع أيقونة
 
-The spacing between the icon and the text is automatically adjusted
-based on the size of the button. You do not need any margin on the icon.
+يتم ضبط التباعد بين الأيقونة والنص تلقائيًا بناءً على حجم الزر. لا تحتاج إلى أي هامش على الأيقونة.
 
 <ComponentPreview
   name="button-with-icon"
-  description="A button with an icon"
+  description="زر مع أيقونة"
   className="mb-4"
 />
 
 ```tsx
 <Button variant="outline" size="sm">
-  <IconGitBranch /> New Branch
+  <IconGitBranch /> فرع جديد
 </Button>
 ```
 
-### Rounded
+### مستدير
 
-Use the `rounded-full` class to make the button rounded.
+استخدم فئة `rounded-full` لجعل الزر مستديرًا.
 
 <ComponentPreview name="button-rounded" className="mb-4" />
 
@@ -227,43 +224,43 @@ Use the `rounded-full` class to make the button rounded.
 </Button>
 ```
 
-### Spinner
+### دوار
 
 <ComponentPreview
   name="button-loading"
-  description="A button with a loading state."
+  description="زر بحالة تحميل."
   className="mb-4"
 />
 
 ```tsx showLineNumbers
 <Button size="sm" variant="outline" disabled>
   <Spinner />
-  Submit
+  إرسال
 </Button>
 ```
 
-### Button Group
+### مجموعة أزرار
 
-To create a button group, use the `ButtonGroup` component. See the [Button Group](/docs/components/button-group) documentation for more details.
+لإنشاء مجموعة أزرار، استخدم مكون `ButtonGroup`. انظر وثائق [مجموعة الأزرار](/docs/components/button-group) لمزيد من التفاصيل.
 
 <ComponentPreview name="button-group-demo" className="mb-4" />
 
 ```tsx showLineNumbers
 <ButtonGroup>
   <ButtonGroup>
-    <Button variant="outline" size="icon" aria-label="Go Back">
+    <Button variant="outline" size="icon" aria-label="العودة">
       <ArrowLeftIcon />
     </Button>
   </ButtonGroup>
   <ButtonGroup>
-    <Button variant="outline">Archive</Button>
-    <Button variant="outline">Report</Button>
+    <Button variant="outline">أرشفة</Button>
+    <Button variant="outline">إبلاغ</Button>
   </ButtonGroup>
   <ButtonGroup>
-    <Button variant="outline">Snooze</Button>
+    <Button variant="outline">تأجيل</Button>
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="icon" aria-label="More Options">
+        <Button variant="outline" size="icon" aria-label="المزيد من الخيارات">
           <MoreHorizontalIcon />
         </Button>
       </DropdownMenuTrigger>
@@ -273,9 +270,9 @@ To create a button group, use the `ButtonGroup` component. See the [Button Group
 </ButtonGroup>
 ```
 
-### Link
+### رابط
 
-You can use the `asChild` prop to make another component look like a button. Here's an example of a link that looks like a button.
+يمكنك استخدام خاصية `asChild` لجعل مكون آخر يبدو مثل زر. إليك مثال على رابط يبدو مثل زر.
 
 ```tsx showLineNumbers
 import Link from "next/link"
@@ -285,29 +282,29 @@ import { Button } from "@/components/ui/button"
 export function LinkAsButton() {
   return (
     <Button asChild>
-      <Link href="/login">Login</Link>
+      <Link href="/login">تسجيل الدخول</Link>
     </Button>
   )
 }
 ```
 
-## API Reference
+## مرجع API
 
-### Button
+### زر
 
-The `Button` component is a wrapper around the `button` element that adds a variety of styles and functionality.
+مكون `Button` هو غلاف حول عنصر `button` يضيف مجموعة متنوعة من الأنماط والوظائف.
 
-| Prop      | Type                                                                          | Default     |
+| الخاصية   | النوع                                                                          | الافتراضي   |
 | --------- | ----------------------------------------------------------------------------- | ----------- |
 | `variant` | `"default" \| "outline" \| "ghost" \| "destructive" \| "secondary" \| "link"` | `"default"` |
 | `size`    | `"default" \| "sm" \| "lg" \| "icon" \| "icon-sm" \| "icon-lg"`               | `"default"` |
 | `asChild` | `boolean`                                                                     | `false`     |
 
-## Changelog
+## سجل التغييرات
 
-### 2025-09-24 New sizes
+### 2025-09-24 أحجام جديدة
 
-We have added two new sizes to the button component: `icon-sm` and `icon-lg`. These sizes are used to create icon buttons. To add them, edit `button.tsx` and add the following code under `size` in `buttonVariants`:
+لقد أضفنا حجمين جديدين لمكون الزر: `icon-sm` و `icon-lg`. تُستخدم هذه الأحجام لإنشاء أزرار أيقونات. لإضافتها، قم بتحرير `button.tsx` وأضف الكود التالي تحت `size` في `buttonVariants`:
 
 ```tsx showLineNumbers title="components/ui/button.tsx"
 const buttonVariants = cva("...", {

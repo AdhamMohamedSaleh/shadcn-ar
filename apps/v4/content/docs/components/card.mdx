@@ -1,18 +1,18 @@
 ---
-title: Card
-description: Displays a card with header, content, and footer.
+title: بطاقة
+description: يعرض بطاقة مع رأس ومحتوى وتذييل.
 component: true
 ---
 
-<ComponentPreview name="card-demo" description="A card with a form" />
+<ComponentPreview name="card-demo" description="بطاقة مع نموذج" />
 
-## Installation
+## التثبيت
 
 <CodeTabs>
 
 <TabsList>
   <TabsTrigger value="cli">CLI</TabsTrigger>
-  <TabsTrigger value="manual">Manual</TabsTrigger>
+  <TabsTrigger value="manual">يدوي</TabsTrigger>
 </TabsList>
 <TabsContent value="cli">
 
@@ -26,11 +26,11 @@ npx shadcn@latest add card
 
 <Steps>
 
-<Step>Copy and paste the following code into your project.</Step>
+<Step>انسخ والصق الكود التالي في مشروعك.</Step>
 
 <ComponentSource name="card" title="components/ui/card.tsx" />
 
-<Step>Update the import paths to match your project setup.</Step>
+<Step>قم بتحديث مسارات الاستيراد لتطابق إعداد مشروعك.</Step>
 
 </Steps>
 
@@ -38,7 +38,7 @@ npx shadcn@latest add card
 
 </CodeTabs>
 
-## Usage
+## الاستخدام
 
 ```tsx showLineNumbers
 import {
@@ -55,15 +55,15 @@ import {
 ```tsx showLineNumbers
 <Card>
   <CardHeader>
-    <CardTitle>Card Title</CardTitle>
-    <CardDescription>Card Description</CardDescription>
-    <CardAction>Card Action</CardAction>
+    <CardTitle>عنوان البطاقة</CardTitle>
+    <CardDescription>وصف البطاقة</CardDescription>
+    <CardAction>إجراء البطاقة</CardAction>
   </CardHeader>
   <CardContent>
-    <p>Card Content</p>
+    <p>محتوى البطاقة</p>
   </CardContent>
   <CardFooter>
-    <p>Card Footer</p>
+    <p>تذييل البطاقة</p>
   </CardFooter>
 </Card>
 ```

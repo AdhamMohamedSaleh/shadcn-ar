@@ -26,7 +26,7 @@ export function TemperatureSelector({
         <HoverCardTrigger asChild>
           <div className="grid gap-4">
             <div className="flex items-center justify-between">
-              <Label htmlFor="temperature">Temperature</Label>
+              <Label htmlFor="temperature">درجة الحرارة</Label>
               <span className="text-muted-foreground hover:border-border w-12 rounded-md border border-transparent px-2 py-0.5 text-right text-sm">
                 {value}
               </span>
@@ -37,7 +37,7 @@ export function TemperatureSelector({
               defaultValue={value}
               step={0.1}
               onValueChange={setValue}
-              aria-label="Temperature"
+              aria-label="درجة الحرارة"
             />
           </div>
         </HoverCardTrigger>
@@ -46,9 +46,7 @@ export function TemperatureSelector({
           className="w-[260px] text-sm"
           side="left"
         >
-          Controls randomness: lowering results in less random completions. As
-          the temperature approaches zero, the model will become deterministic
-          and repetitive.
+          يتحكم في العشوائية: خفضه يؤدي إلى إكمالات أقل عشوائية. كلما اقتربت درجة الحرارة من الصفر، سيصبح النموذج حتميًا ومكررًا.
         </HoverCardContent>
       </HoverCard>
     </div>

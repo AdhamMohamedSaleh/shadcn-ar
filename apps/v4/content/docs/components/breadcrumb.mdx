@@ -1,22 +1,22 @@
 ---
-title: Breadcrumb
-description: Displays the path to the current resource using a hierarchy of links.
+title: فتات الخبز
+description: يعرض المسار إلى المورد الحالي باستخدام تدرج هرمي من الروابط.
 component: true
 ---
 
 <ComponentPreview
   name="breadcrumb-demo"
   className="[&_.preview]:p-2"
-  description="A breadcrumb with a collapsible dropdown."
+  description="فتات خبز مع قائمة منسدلة قابلة للطي."
 />
 
-## Installation
+## التثبيت
 
 <CodeTabs>
 
 <TabsList>
   <TabsTrigger value="cli">CLI</TabsTrigger>
-  <TabsTrigger value="manual">Manual</TabsTrigger>
+  <TabsTrigger value="manual">يدوي</TabsTrigger>
 </TabsList>
 <TabsContent value="cli">
 
@@ -30,11 +30,11 @@ npx shadcn@latest add breadcrumb
 
 <Steps>
 
-<Step>Copy and paste the following code into your project.</Step>
+<Step>انسخ والصق الكود التالي في مشروعك.</Step>
 
 <ComponentSource name="breadcrumb" title="components/ui/breadcrumb.tsx" />
 
-<Step>Update the import paths to match your project setup.</Step>
+<Step>قم بتحديث مسارات الاستيراد لتطابق إعداد مشروعك.</Step>
 
 </Steps>
 
@@ -42,7 +42,7 @@ npx shadcn@latest add breadcrumb
 
 </CodeTabs>
 
-## Usage
+## الاستخدام
 
 ```tsx showLineNumbers
 import {
@@ -59,29 +59,29 @@ import {
 <Breadcrumb>
   <BreadcrumbList>
     <BreadcrumbItem>
-      <BreadcrumbLink href="/">Home</BreadcrumbLink>
+      <BreadcrumbLink href="/">الرئيسية</BreadcrumbLink>
     </BreadcrumbItem>
     <BreadcrumbSeparator />
     <BreadcrumbItem>
-      <BreadcrumbLink href="/components">Components</BreadcrumbLink>
+      <BreadcrumbLink href="/components">المكونات</BreadcrumbLink>
     </BreadcrumbItem>
     <BreadcrumbSeparator />
     <BreadcrumbItem>
-      <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
+      <BreadcrumbPage>فتات الخبز</BreadcrumbPage>
     </BreadcrumbItem>
   </BreadcrumbList>
 </Breadcrumb>
 ```
 
-## Examples
+## أمثلة
 
-### Custom separator
+### فاصل مخصص
 
-Use a custom component as `children` for `<BreadcrumbSeparator />` to create a custom separator.
+استخدم مكونًا مخصصًا كـ `children` لـ `<BreadcrumbSeparator />` لإنشاء فاصل مخصص.
 
 <ComponentPreview
   name="breadcrumb-separator"
-  description="A breadcrumb with a custom separator"
+  description="فتات خبز مع فاصل مخصص"
 />
 
 ```tsx showLineNumbers {1,10-12}
@@ -92,13 +92,13 @@ import { SlashIcon } from "lucide-react"
 <Breadcrumb>
   <BreadcrumbList>
     <BreadcrumbItem>
-      <BreadcrumbLink href="/">Home</BreadcrumbLink>
+      <BreadcrumbLink href="/">الرئيسية</BreadcrumbLink>
     </BreadcrumbItem>
     <BreadcrumbSeparator>
       <SlashIcon />
     </BreadcrumbSeparator>
     <BreadcrumbItem>
-      <BreadcrumbLink href="/components">Components</BreadcrumbLink>
+      <BreadcrumbLink href="/components">المكونات</BreadcrumbLink>
     </BreadcrumbItem>
   </BreadcrumbList>
 </Breadcrumb>
@@ -106,14 +106,14 @@ import { SlashIcon } from "lucide-react"
 
 ---
 
-### Dropdown
+### قائمة منسدلة
 
-You can compose `<BreadcrumbItem />` with a `<DropdownMenu />` to create a dropdown in the breadcrumb.
+يمكنك تكوين `<BreadcrumbItem />` مع `<DropdownMenu />` لإنشاء قائمة منسدلة في فتات الخبز.
 
 <ComponentPreview
   name="breadcrumb-dropdown"
   className="[&_.preview]:p-2"
-  description="A breadcrumb with a dropdown."
+  description="فتات خبز مع قائمة منسدلة."
 />
 
 ```tsx showLineNumbers {1-6,11-21}
@@ -129,11 +129,11 @@ import {
 <BreadcrumbItem>
   <DropdownMenu>
     <DropdownMenuTrigger>
-      Components
+      المكونات
     </DropdownMenuTrigger>
     <DropdownMenuContent align="start">
-      <DropdownMenuItem>Documentation</DropdownMenuItem>
-      <DropdownMenuItem>Themes</DropdownMenuItem>
+      <DropdownMenuItem>التوثيق</DropdownMenuItem>
+      <DropdownMenuItem>السمات</DropdownMenuItem>
       <DropdownMenuItem>GitHub</DropdownMenuItem>
     </DropdownMenuContent>
   </DropdownMenu>
@@ -142,14 +142,14 @@ import {
 
 ---
 
-### Collapsed
+### مطوي
 
-We provide a `<BreadcrumbEllipsis />` component to show a collapsed state when the breadcrumb is too long.
+نحن نوفر مكون `<BreadcrumbEllipsis />` لإظهار حالة مطوية عندما يكون فتات الخبز طويلاً جدًا.
 
 <ComponentPreview
   name="breadcrumb-ellipsis"
   className="[&_.preview]:p-2"
-  description="A breadcrumb showing a collapsed state."
+  description="فتات خبز يظهر حالة مطوية."
 />
 
 ```tsx showLineNumbers {1,9}
@@ -170,13 +170,13 @@ import { BreadcrumbEllipsis } from "@/components/ui/breadcrumb"
 
 ---
 
-### Link component
+### مكون الرابط
 
-To use a custom link component from your routing library, you can use the `asChild` prop on `<BreadcrumbLink />`.
+لاستخدام مكون رابط مخصص من مكتبة التوجيه الخاصة بك، يمكنك استخدام خاصية `asChild` على `<BreadcrumbLink />`.
 
 <ComponentPreview
   name="breadcrumb-link"
-  description="A breadcrumb with a custom Link component"
+  description="فتات خبز مع مكون رابط مخصص"
 />
 
 ```tsx showLineNumbers {1,8-10}
@@ -188,7 +188,7 @@ import Link from "next/link"
   <BreadcrumbList>
     <BreadcrumbItem>
       <BreadcrumbLink asChild>
-        <Link href="/">Home</Link>
+        <Link href="/">الرئيسية</Link>
       </BreadcrumbLink>
     </BreadcrumbItem>
     {/* ... */}
@@ -198,14 +198,14 @@ import Link from "next/link"
 
 ---
 
-### Responsive
+### متجاوب
 
-Here's an example of a responsive breadcrumb that composes `<BreadcrumbItem />` with `<BreadcrumbEllipsis />`, `<DropdownMenu />`, and `<Drawer />`.
+إليك مثال على فتات خبز متجاوب يكوّن `<BreadcrumbItem />` مع `<BreadcrumbEllipsis />`، `<DropdownMenu />`، و `<Drawer />`.
 
-It displays a dropdown on desktop and a drawer on mobile.
+يعرض قائمة منسدلة على سطح المكتب ودرجًا على الهاتف المحمول.
 
 <ComponentPreview
   name="breadcrumb-responsive"
   className="[&_.preview]:p-2"
-  description="A responsive breadcrumb. It displays a dropdown on desktop and a drawer on mobile."
+  description="فتات خبز متجاوب. يعرض قائمة منسدلة على سطح المكتب ودرجًا على الهاتف المحمول."
 />

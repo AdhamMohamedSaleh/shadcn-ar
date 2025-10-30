@@ -37,20 +37,20 @@ export function PresetSelector({ presets, ...props }: PresetSelectorProps) {
         <Button
           variant="outline"
           role="combobox"
-          aria-label="Load a preset..."
+          aria-label="تحميل إعداد مسبق..."
           aria-expanded={open}
           className="flex-1 justify-between md:max-w-[200px] lg:max-w-[300px]"
         >
-          {selectedPreset ? selectedPreset.name : "Load a preset..."}
+          {selectedPreset ? selectedPreset.name : "تحميل إعداد مسبق..."}
           <ChevronsUpDown className="opacity-50" />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-[300px] p-0">
         <Command>
-          <CommandInput placeholder="Search presets..." />
+          <CommandInput placeholder="بحث في الإعدادات المسبقة..." />
           <CommandList>
-            <CommandEmpty>No presets found.</CommandEmpty>
-            <CommandGroup heading="Examples">
+            <CommandEmpty>لم يتم العثور على إعدادات مسبقة.</CommandEmpty>
+            <CommandGroup heading="أمثلة">
               {presets.map((preset) => (
                 <CommandItem
                   key={preset.id}
@@ -73,7 +73,7 @@ export function PresetSelector({ presets, ...props }: PresetSelectorProps) {
             </CommandGroup>
             <CommandSeparator />
             <CommandGroup>
-              <CommandItem>More examples</CommandItem>
+              <CommandItem>المزيد من الأمثلة</CommandItem>
             </CommandGroup>
           </CommandList>
         </Command>
