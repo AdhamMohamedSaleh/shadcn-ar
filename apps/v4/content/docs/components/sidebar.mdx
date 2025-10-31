@@ -1,56 +1,56 @@
 ---
-title: Sidebar
-description: A composable, themeable and customizable sidebar component.
+title: الشريط الجانبي
+description: مكون شريط جانبي قابل للتكوين والتهيئة والتخصيص.
 component: true
 ---
 
 <figure className="flex flex-col gap-4">
   <ComponentPreview
     name="sidebar-07"
-    title="Sidebar"
+    title="الشريط الجانبي"
     type="block"
-    description="A composable, themeable and customizable sidebar component built using shadcn/ui"
+    description="مكون شريط جانبي قابل للتكوين والتهيئة والتخصيص مبني باستخدام shadcn/ui"
     className="w-full"
   />
   <figcaption className="text-center text-sm text-gray-500">
-    A sidebar that collapses to icons.
+    شريط جانبي ينهار إلى أيقونات.
   </figcaption>
 </figure>
 
-Sidebars are one of the most complex components to build. They are central
-to any application and often contain a lot of moving parts.
+تعد الأشرطة الجانبية من أكثر المكونات تعقيدًا في البناء. فهي مركزية
+لأي تطبيق وغالبًا ما تحتوي على الكثير من الأجزاء المتحركة.
 
-I don't like building sidebars. So I built 30+ of them. All kinds of
-configurations. Then I extracted the core components into `sidebar.tsx`.
+لا أحب بناء الأشرطة الجانبية. لذا قمت ببناء أكثر من 30 نوعًا منها بمختلف
+التكوينات. ثم استخلصت المكونات الأساسية في `sidebar.tsx`.
 
-We now have a solid foundation to build on top of. Composable. Themeable.
-Customizable.
+لدينا الآن أساس متين للبناء عليه. قابل للتكوين. قابل للتهيئة.
+قابل للتخصيص.
 
-[Browse the Blocks Library](/blocks).
+[تصفح مكتبة البلوكات](/blocks).
 
-## Installation
+## التثبيت
 
 <CodeTabs>
 
 <TabsList>
-  <TabsTrigger value="cli">CLI</TabsTrigger>
-  <TabsTrigger value="manual">Manual</TabsTrigger>
+  <TabsTrigger value="cli">سطر الأوامر</TabsTrigger>
+  <TabsTrigger value="manual">يدوي</TabsTrigger>
 </TabsList>
 <TabsContent value="cli">
 
 <Steps>
 
-<Step>Run the following command to install `sidebar.tsx`</Step>
+<Step>شغّل الأمر التالي لتثبيت `sidebar.tsx`</Step>
 
 ```bash
 npx shadcn@latest add sidebar
 ```
 
-<Step>Add the following colors to your CSS file</Step>
+<Step>أضف الألوان التالية إلى ملف CSS الخاص بك</Step>
 
-The command above should install the colors for you. If not, copy and paste the following in your CSS file.
+من المفترض أن يثبّت الأمر أعلاه الألوان لك. إن لم يحدث ذلك، انسخ والصق التالي في ملف CSS.
 
-We'll go over the colors later in the [theming section](/docs/components/sidebar#theming).
+سنستعرض هذه الألوان لاحقًا في [قسم التهيئة](/docs/components/sidebar#theming).
 
 ```css showLineNumbers title="app/globals.css"
 @layer base {
@@ -86,15 +86,15 @@ We'll go over the colors later in the [theming section](/docs/components/sidebar
 
 <Steps>
 
-<Step>Copy and paste the following code into your project.</Step>
+<Step>انسخ والصق الشفرة التالية في مشروعك.</Step>
 
 <ComponentSource name="sidebar" title="components/ui/sidebar.tsx" />
 
-<Step>Update the import paths to match your project setup.</Step>
+<Step>حدّث مسارات الاستيراد لتتوافق مع إعداد مشروعك.</Step>
 
-<Step>Add the following colors to your CSS file</Step>
+<Step>أضف الألوان التالية إلى ملف CSS الخاص بك</Step>
 
-We'll go over the colors later in the [theming section](/docs/components/sidebar#theming).
+سنستعرض هذه الألوان لاحقًا في [قسم التهيئة](/docs/components/sidebar#theming).
 
 ```css showLineNumbers title="app/globals.css"
 @layer base {
@@ -128,33 +128,33 @@ We'll go over the colors later in the [theming section](/docs/components/sidebar
 
 </CodeTabs>
 
-## Structure
+## البنية
 
-A `Sidebar` component is composed of the following parts:
+يتكون مكون `Sidebar` من الأجزاء التالية:
 
 - `SidebarProvider` - Handles collapsible state.
-- `Sidebar` - The sidebar container.
-- `SidebarHeader` and `SidebarFooter` - Sticky at the top and bottom of the sidebar.
-- `SidebarContent` - Scrollable content.
-- `SidebarGroup` - Section within the `SidebarContent`.
-- `SidebarTrigger` - Trigger for the `Sidebar`.
+- `Sidebar` - حاوية الشريط الجانبي.
+- `SidebarHeader` و`SidebarFooter` - ثابتان أعلى وأسفل الشريط الجانبي.
+- `SidebarContent` - محتوى قابل للتمرير.
+- `SidebarGroup` - قسم داخل `SidebarContent`.
+- `SidebarTrigger` - مُشغِّل الشريط الجانبي.
 
 <Image
   src="/images/sidebar-structure.png"
   width="716"
   height="420"
-  alt="Sidebar Structure"
+  alt="بنية الشريط الجانبي"
   className="mt-6 w-full overflow-hidden rounded-lg border dark:hidden"
 />
 <Image
   src="/images/sidebar-structure-dark.png"
   width="716"
   height="420"
-  alt="Sidebar Structure"
+  alt="بنية الشريط الجانبي"
   className="mt-6 hidden w-full overflow-hidden rounded-lg border dark:block"
 />
 
-## Usage
+## الاستخدام
 
 ```tsx showLineNumbers title="app/layout.tsx"
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
@@ -196,14 +196,14 @@ export function AppSidebar() {
 }
 ```
 
-## Your First Sidebar
+## الشريط الجانبي الأول لك
 
-Let's start with the most basic sidebar. A collapsible sidebar with a menu.
+لنبدأ بأبسط شريط جانبي: شريط جانبي قابل للطي مع قائمة.
 
 <Steps>
 
 <Step>
-  Add a `SidebarProvider` and `SidebarTrigger` at the root of your application.
+  أضف `SidebarProvider` و`SidebarTrigger` في جذر تطبيقك.
 </Step>
 
 ```tsx showLineNumbers title="app/layout.tsx"
@@ -223,7 +223,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 }
 ```
 
-<Step>Create a new sidebar component at `components/app-sidebar.tsx`.</Step>
+<Step>أنشئ مكون شريط جانبي جديدًا في `components/app-sidebar.tsx`.</Step>
 
 ```tsx showLineNumbers title="components/app-sidebar.tsx"
 import { Sidebar, SidebarContent } from "@/components/ui/sidebar"
@@ -237,9 +237,9 @@ export function AppSidebar() {
 }
 ```
 
-<Step>Now, let's add a `SidebarMenu` to the sidebar.</Step>
+<Step>الآن، لنضف `SidebarMenu` إلى الشريط الجانبي.</Step>
 
-We'll use the `SidebarMenu` component in a `SidebarGroup`.
+سنستخدم مكون `SidebarMenu` داخل `SidebarGroup`.
 
 ```tsx showLineNumbers title="components/app-sidebar.tsx"
 import { Calendar, Home, Inbox, Search, Settings } from "lucide-react"
@@ -255,7 +255,7 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
 
-// Menu items.
+// عناصر القائمة.
 const items = [
   {
     title: "Home",
@@ -289,7 +289,7 @@ export function AppSidebar() {
     <Sidebar>
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Application</SidebarGroupLabel>
+          <SidebarGroupLabel>التطبيق</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {items.map((item) => (
@@ -311,55 +311,55 @@ export function AppSidebar() {
 }
 ```
 
-<Step>You've created your first sidebar.</Step>
+<Step>لقد أنشأت أول شريط جانبي لك.</Step>
 
-You should see something like this:
+يفترض أن ترى شيئًا مثل التالي:
 
 <figure className="flex flex-col gap-4">
   <ComponentPreview
     name="sidebar-demo"
-    title="Sidebar"
+    title="الشريط الجانبي"
     type="block"
-    description="Your first sidebar."
+    description="أول شريط جانبي لك."
     className="w-full"
   />
   <figcaption className="text-center text-sm text-gray-500">
-    Your first sidebar.
+    أول شريط جانبي لك.
   </figcaption>
 </figure>
 
 </Steps>
 
-## Components
+## المكونات
 
-The components in `sidebar.tsx` are built to be composable i.e you build your sidebar by putting the provided components together. They also compose well with other shadcn/ui components such as `DropdownMenu`, `Collapsible` or `Dialog` etc.
+المكونات في `sidebar.tsx` مبنية لتكون قابلة للتكوين، أي أنك تبني الشريط الجانبي عن طريق تركيب المكونات المتوفرة معًا. كما أنها تتكامل جيدًا مع مكونات shadcn/ui الأخرى مثل `DropdownMenu` و`Collapsible` و`Dialog` وغيرها.
 
-**If you need to change the code in `sidebar.tsx`, you are encouraged to do so. The code is yours. Use `sidebar.tsx` as a starting point and build your own.**
+**إذا احتجت لتعديل الشفرة في `sidebar.tsx` فنشجعك على ذلك. الشفرة لك. استخدم `sidebar.tsx` كنقطة انطلاق وابنِ نسختك الخاصة.**
 
-In the next sections, we'll go over each component and how to use them.
+في الأقسام التالية، سنستعرض كل مكون وكيفية استخدامه.
 
 ## SidebarProvider
 
-The `SidebarProvider` component is used to provide the sidebar context to the `Sidebar` component. You should always wrap your application in a `SidebarProvider` component.
+يُستخدم مكون `SidebarProvider` لتزويد مكون `Sidebar` بالسياق. يجب دائمًا إحاطة تطبيقك بمكون `SidebarProvider`.
 
-### Props
+### الخصائص
 
-| Name           | Type                      | Description                                  |
-| -------------- | ------------------------- | -------------------------------------------- |
-| `defaultOpen`  | `boolean`                 | Default open state of the sidebar.           |
-| `open`         | `boolean`                 | Open state of the sidebar (controlled).      |
-| `onOpenChange` | `(open: boolean) => void` | Sets open state of the sidebar (controlled). |
+| الاسم           | النوع                      | الوصف                                         |
+| -------------- | ------------------------- | --------------------------------------------- |
+| `defaultOpen`  | `boolean`                 | الحالة الافتراضية لفتح الشريط الجانبي.       |
+| `open`         | `boolean`                 | حالة فتح الشريط الجانبي (محكومة).            |
+| `onOpenChange` | `(open: boolean) => void` | يضبط حالة فتح الشريط الجانبي (محكومة).       |
 
-### Width
+### العرض
 
-If you have a single sidebar in your application, you can use the `SIDEBAR_WIDTH` and `SIDEBAR_WIDTH_MOBILE` variables in `sidebar.tsx` to set the width of the sidebar.
+إذا كان لديك شريط جانبي واحد في تطبيقك، يمكنك استخدام المتغيرين `SIDEBAR_WIDTH` و`SIDEBAR_WIDTH_MOBILE` في `sidebar.tsx` لتحديد عرض الشريط الجانبي.
 
 ```tsx showLineNumbers title="components/ui/sidebar.tsx"
 const SIDEBAR_WIDTH = "16rem"
 const SIDEBAR_WIDTH_MOBILE = "18rem"
 ```
 
-For multiple sidebars in your application, you can use the `style` prop to set the width of the sidebar.
+لوجود عدة أشرطة جانبية في تطبيقك، يمكنك استخدام خاصية `style` لتحديد عرض الشريط الجانبي.
 
 To set the width of the sidebar, you can use the `--sidebar-width` and `--sidebar-width-mobile` CSS variables in the `style` prop.
 
@@ -374,23 +374,23 @@ To set the width of the sidebar, you can use the `--sidebar-width` and `--sideba
 </SidebarProvider>
 ```
 
-This will handle the width of the sidebar but also the layout spacing.
+سيؤدي هذا إلى التحكم في عرض الشريط الجانبي وكذلك المسافات في التخطيط.
 
-### Keyboard Shortcut
+### اختصار لوحة المفاتيح
 
-The `SIDEBAR_KEYBOARD_SHORTCUT` variable is used to set the keyboard shortcut used to open and close the sidebar.
+يُستخدم المتغير `SIDEBAR_KEYBOARD_SHORTCUT` لتعيين اختصار لوحة المفاتيح لفتح الشريط الجانبي وإغلاقه.
 
-To trigger the sidebar, you use the `cmd+b` keyboard shortcut on Mac and `ctrl+b` on Windows.
+لتحفيز الشريط الجانبي، استخدم الاختصار `cmd+b` على الماك و`ctrl+b` على ويندوز.
 
-You can change the keyboard shortcut by updating the `SIDEBAR_KEYBOARD_SHORTCUT` variable.
+يمكنك تغيير اختصار لوحة المفاتيح عبر تحديث المتغير `SIDEBAR_KEYBOARD_SHORTCUT`.
 
 ```tsx showLineNumbers title="components/ui/sidebar.tsx"
 const SIDEBAR_KEYBOARD_SHORTCUT = "b"
 ```
 
-### Persisted State
+### الحالة المُستدامة
 
-The `SidebarProvider` supports persisting the sidebar state across page reloads and server-side rendering. It uses cookies to store the current state of the sidebar. When the sidebar state changes, a default cookie named `sidebar_state` is set with the current open/closed state. This cookie is then read on subsequent page loads to restore the sidebar state.
+يدعم `SidebarProvider` استدامة حالة الشريط الجانبي عبر إعادة تحميل الصفحات والتهيئة على الخادم. يستخدم ملفات تعريف الارتباط لتخزين الحالة الحالية للشريط الجانبي. عند تغير الحالة، يتم تعيين ملف تعريف ارتباط افتراضي باسم `sidebar_state` بقيمة حالة الفتح/الإغلاق. ثم تتم قراءته في التحميلات اللاحقة لاستعادة الحالة.
 
 To persist sidebar state in Next.js, set up your `SidebarProvider` in `app/layout.tsx` like this:
 
@@ -416,7 +416,7 @@ export async function Layout({ children }: { children: React.ReactNode }) {
 }
 ```
 
-You can change the name of the cookie by updating the `SIDEBAR_COOKIE_NAME` variable in `sidebar.tsx`.
+يمكنك تغيير اسم ملف تعريف الارتباط عبر تحديث المتغير `SIDEBAR_COOKIE_NAME` في `sidebar.tsx`.
 
 ```tsx showLineNumbers title="components/ui/sidebar.tsx"
 const SIDEBAR_COOKIE_NAME = "sidebar_state"
@@ -424,7 +424,7 @@ const SIDEBAR_COOKIE_NAME = "sidebar_state"
 
 ## Sidebar
 
-The main `Sidebar` component used to render a collapsible sidebar.
+المكون الرئيسي `Sidebar` المستخدم لعرض شريط جانبي قابل للطي.
 
 ```tsx showLineNumbers
 import { Sidebar } from "@/components/ui/sidebar"
@@ -434,19 +434,19 @@ export function AppSidebar() {
 }
 ```
 
-### Props
+### الخصائص
 
-| Property      | Type                              | Description                       |
-| ------------- | --------------------------------- | --------------------------------- |
-| `side`        | `left` or `right`                 | The side of the sidebar.          |
-| `variant`     | `sidebar`, `floating`, or `inset` | The variant of the sidebar.       |
-| `collapsible` | `offcanvas`, `icon`, or `none`    | Collapsible state of the sidebar. |
+| الخاصية       | النوع                             | الوصف                              |
+| ------------- | --------------------------------- | ---------------------------------- |
+| `side`        | `left` أو `right`                 | جانب ظهور الشريط الجانبي.         |
+| `variant`     | `sidebar` أو `floating` أو `inset` | نوع الشريط الجانبي.               |
+| `collapsible` | `offcanvas` أو `icon` أو `none`    | حالة قابلية الطي للشريط الجانبي.  |
 
 ### side
 
-Use the `side` prop to change the side of the sidebar.
+استخدم خاصية `side` لتغيير جانب الشريط الجانبي.
 
-Available options are `left` and `right`.
+القيم المتاحة هي `left` و`right`.
 
 ```tsx showLineNumbers
 import { Sidebar } from "@/components/ui/sidebar"
@@ -458,9 +458,9 @@ export function AppSidebar() {
 
 ### variant
 
-Use the `variant` prop to change the variant of the sidebar.
+استخدم خاصية `variant` لتغيير نوع الشريط الجانبي.
 
-Available options are `sidebar`, `floating` and `inset`.
+القيم المتاحة هي `sidebar` و`floating` و`inset`.
 
 ```tsx showLineNumbers
 import { Sidebar } from "@/components/ui/sidebar"
@@ -471,8 +471,8 @@ export function AppSidebar() {
 ```
 
 <Callout>
-  **Note:** If you use the `inset` variant, remember to wrap your main content
-  in a `SidebarInset` component.
+  **ملاحظة:** إذا استخدمت نوع `inset` فتذكر إحاطة المحتوى الرئيسي
+  بمكون `SidebarInset`.
 </Callout>
 
 ```tsx showLineNumbers
@@ -486,9 +486,9 @@ export function AppSidebar() {
 
 ### collapsible
 
-Use the `collapsible` prop to make the sidebar collapsible.
+استخدم خاصية `collapsible` لجعل الشريط الجانبي قابلًا للطي.
 
-Available options are `offcanvas`, `icon` and `none`.
+القيم المتاحة هي `offcanvas` و`icon` و`none`.
 
 ```tsx showLineNumbers
 import { Sidebar } from "@/components/ui/sidebar"
@@ -498,15 +498,15 @@ export function AppSidebar() {
 }
 ```
 
-| Prop        | Description                                                  |
+| الخاصية     | الوصف                                                        |
 | ----------- | ------------------------------------------------------------ |
-| `offcanvas` | A collapsible sidebar that slides in from the left or right. |
-| `icon`      | A sidebar that collapses to icons.                           |
-| `none`      | A non-collapsible sidebar.                                   |
+| `offcanvas` | شريط جانبي قابل للطي ينزلق من اليسار أو اليمين.              |
+| `icon`      | شريط جانبي ينهار إلى أيقونات.                               |
+| `none`      | شريط جانبي غير قابل للطي.                                    |
 
 ## useSidebar
 
-The `useSidebar` hook is used to control the sidebar.
+تُستخدم دالة `useSidebar` للتحكم في الشريط الجانبي.
 
 ```tsx showLineNumbers
 import { useSidebar } from "@/components/ui/sidebar"
@@ -524,32 +524,32 @@ export function AppSidebar() {
 }
 ```
 
-| Property        | Type                      | Description                                   |
-| --------------- | ------------------------- | --------------------------------------------- |
-| `state`         | `expanded` or `collapsed` | The current state of the sidebar.             |
-| `open`          | `boolean`                 | Whether the sidebar is open.                  |
-| `setOpen`       | `(open: boolean) => void` | Sets the open state of the sidebar.           |
-| `openMobile`    | `boolean`                 | Whether the sidebar is open on mobile.        |
-| `setOpenMobile` | `(open: boolean) => void` | Sets the open state of the sidebar on mobile. |
-| `isMobile`      | `boolean`                 | Whether the sidebar is on mobile.             |
-| `toggleSidebar` | `() => void`              | Toggles the sidebar. Desktop and mobile.      |
+| الخاصية         | النوع                      | الوصف                                          |
+| --------------- | ------------------------- | ---------------------------------------------- |
+| `state`         | `expanded` أو `collapsed` | الحالة الحالية للشريط الجانبي.                 |
+| `open`          | `boolean`                 | ما إذا كان الشريط الجانبي مفتوحًا.             |
+| `setOpen`       | `(open: boolean) => void` | يضبط حالة فتح الشريط الجانبي.                  |
+| `openMobile`    | `boolean`                 | ما إذا كان الشريط الجانبي مفتوحًا على الجوال.  |
+| `setOpenMobile` | `(open: boolean) => void` | يضبط حالة فتح الشريط الجانبي على الجوال.       |
+| `isMobile`      | `boolean`                 | ما إذا كان العرض على الجوال.                   |
+| `toggleSidebar` | `() => void`              | يبدّل حالة الشريط الجانبي على الحاسوب والجوال.  |
 
 ## SidebarHeader
 
-Use the `SidebarHeader` component to add a sticky header to the sidebar.
+استخدم مكون `SidebarHeader` لإضافة ترويسة ثابتة إلى الشريط الجانبي.
 
-The following example adds a `<DropdownMenu>` to the `SidebarHeader`.
+المثال التالي يضيف `<DropdownMenu>` إلى `SidebarHeader`.
 
 <figure className="mt-6 flex flex-col gap-4">
   <ComponentPreview
     name="sidebar-header"
-    title="Sidebar"
+    title="الشريط الجانبي"
     type="block"
-    description="A sidebar header with a dropdown menu."
+    description="ترويسة شريط جانبي مع قائمة منسدلة."
     className="w-full"
   />
   <figcaption className="text-center text-sm text-gray-500">
-    A sidebar header with a dropdown menu.
+    ترويسة شريط جانبي مع قائمة منسدلة.
   </figcaption>
 </figure>
 
@@ -582,20 +582,20 @@ The following example adds a `<DropdownMenu>` to the `SidebarHeader`.
 
 ## SidebarFooter
 
-Use the `SidebarFooter` component to add a sticky footer to the sidebar.
+استخدم مكون `SidebarFooter` لإضافة تذييل ثابت إلى الشريط الجانبي.
 
-The following example adds a `<DropdownMenu>` to the `SidebarFooter`.
+المثال التالي يضيف `<DropdownMenu>` إلى `SidebarFooter`.
 
 <figure className="mt-6 flex flex-col gap-4">
   <ComponentPreview
     name="sidebar-footer"
-    title="Sidebar"
+    title="الشريط الجانبي"
     type="block"
-    description="A sidebar footer with a dropdown menu."
+    description="تذييل شريط جانبي مع قائمة منسدلة."
     className="w-full"
   />
   <figcaption className="text-center text-sm text-gray-500">
-    A sidebar footer with a dropdown menu.
+    تذييل شريط جانبي مع قائمة منسدلة.
   </figcaption>
 </figure>
 
@@ -642,7 +642,7 @@ export function AppSidebar() {
 
 ## SidebarContent
 
-The `SidebarContent` component is used to wrap the content of the sidebar. This is where you add your `SidebarGroup` components. It is scrollable.
+يُستخدم مكون `SidebarContent` لاحتواء محتوى الشريط الجانبي. هنا تضيف مكونات `SidebarGroup`. وهو قابل للتمرير.
 
 ```tsx showLineNumbers
 import { Sidebar, SidebarContent } from "@/components/ui/sidebar"
@@ -661,20 +661,20 @@ export function AppSidebar() {
 
 ## SidebarGroup
 
-Use the `SidebarGroup` component to create a section within the sidebar.
+استخدم مكون `SidebarGroup` لإنشاء قسم داخل الشريط الجانبي.
 
-A `SidebarGroup` has a `SidebarGroupLabel`, a `SidebarGroupContent` and an optional `SidebarGroupAction`.
+يحتوي `SidebarGroup` على `SidebarGroupLabel` و`SidebarGroupContent` و`SidebarGroupAction` اختياري.
 
 <figure className="mt-6 flex flex-col gap-4">
   <ComponentPreview
     name="sidebar-group"
-    title="Sidebar Group"
+    title="مجموعة الشريط الجانبي"
     type="block"
-    description="A sidebar group."
+    description="مجموعة شريط جانبي."
     className="w-full"
   />
   <figcaption className="text-center text-sm text-gray-500">
-    A sidebar group.
+    مجموعة شريط جانبي.
   </figcaption>
 </figure>
 
@@ -686,9 +686,9 @@ export function AppSidebar() {
     <Sidebar>
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Application</SidebarGroupLabel>
+          <SidebarGroupLabel>التطبيق</SidebarGroupLabel>
           <SidebarGroupAction>
-            <Plus /> <span className="sr-only">Add Project</span>
+            <Plus /> <span className="sr-only">إضافة مشروع</span>
           </SidebarGroupAction>
           <SidebarGroupContent></SidebarGroupContent>
         </SidebarGroup>
@@ -698,20 +698,20 @@ export function AppSidebar() {
 }
 ```
 
-## Collapsible SidebarGroup
+## SidebarGroup قابل للطي
 
-To make a `SidebarGroup` collapsible, wrap it in a `Collapsible`.
+لجعل `SidebarGroup` قابلاً للطي، لفّه داخل `Collapsible`.
 
 <figure className="mt-6 flex flex-col gap-4">
   <ComponentPreview
     name="sidebar-group-collapsible"
-    title="Sidebar Group"
+    title="مجموعة الشريط الجانبي"
     type="block"
-    description="A collapsible sidebar group."
+    description="مجموعة شريط جانبي قابلة للطي."
     className="w-full"
   />
   <figcaption className="text-center text-sm text-gray-500">
-    A collapsible sidebar group.
+    مجموعة شريط جانبي قابلة للطي.
   </figcaption>
 </figure>
 
@@ -722,7 +722,7 @@ export function AppSidebar() {
       <SidebarGroup>
         <SidebarGroupLabel asChild>
           <CollapsibleTrigger>
-            Help
+            المساعدة
             <ChevronDown className="ml-auto transition-transform group-data-[state=open]/collapsible:rotate-180" />
           </CollapsibleTrigger>
         </SidebarGroupLabel>
@@ -736,24 +736,23 @@ export function AppSidebar() {
 ```
 
 <Callout>
-  **Note:** We wrap the `CollapsibleTrigger` in a `SidebarGroupLabel` to render
-  a button.
+  **ملاحظة:** نلف `CollapsibleTrigger` داخل `SidebarGroupLabel` لعرض زر.
 </Callout>
 
 ## SidebarGroupAction
 
-Use the `SidebarGroupAction` component to add an action button to the `SidebarGroup`.
+استخدم مكون `SidebarGroupAction` لإضافة زر إجراء إلى `SidebarGroup`.
 
 <figure className="flex flex-col gap-4">
   <ComponentPreview
     name="sidebar-group-action"
-    title="Sidebar Group"
+    title="مجموعة الشريط الجانبي"
     type="block"
-    description="A sidebar group with an action button."
+    description="مجموعة شريط جانبي مع زر إجراء."
     className="w-full"
   />
   <figcaption className="text-center text-sm text-gray-500">
-    A sidebar group with an action button.
+    مجموعة شريط جانبي مع زر إجراء.
   </figcaption>
 </figure>
 
@@ -761,9 +760,9 @@ Use the `SidebarGroupAction` component to add an action button to the `SidebarGr
 export function AppSidebar() {
   return (
     <SidebarGroup>
-      <SidebarGroupLabel asChild>Projects</SidebarGroupLabel>
-      <SidebarGroupAction title="Add Project">
-        <Plus /> <span className="sr-only">Add Project</span>
+      <SidebarGroupLabel asChild>المشاريع</SidebarGroupLabel>
+      <SidebarGroupAction title="إضافة مشروع">
+        <Plus /> <span className="sr-only">إضافة مشروع</span>
       </SidebarGroupAction>
       <SidebarGroupContent />
     </SidebarGroup>
@@ -773,37 +772,37 @@ export function AppSidebar() {
 
 ## SidebarMenu
 
-The `SidebarMenu` component is used for building a menu within a `SidebarGroup`.
+يُستخدم مكون `SidebarMenu` لبناء قائمة داخل `SidebarGroup`.
 
-A `SidebarMenu` component is composed of `SidebarMenuItem`, `SidebarMenuButton`, `<SidebarMenuAction />` and `<SidebarMenuSub />` components.
+يتكون مكون `SidebarMenu` من المكونات `SidebarMenuItem` و`SidebarMenuButton` و`<SidebarMenuAction />` و`<SidebarMenuSub />`.
 
 <Image
   src="/images/sidebar-menu.png"
   width="716"
   height="420"
-  alt="Sidebar Menu"
+  alt="قائمة الشريط الجانبي"
   className="mt-6 w-full overflow-hidden rounded-lg border dark:hidden"
 />
 <Image
   src="/images/sidebar-menu-dark.png"
   width="716"
   height="420"
-  alt="Sidebar Menu"
+  alt="قائمة الشريط الجانبي"
   className="mt-6 hidden w-full overflow-hidden rounded-lg border dark:block"
 />
 
-Here's an example of a `SidebarMenu` component rendering a list of projects.
+فيما يلي مثال لمكون `SidebarMenu` يعرض قائمة بالمشاريع.
 
 <figure className="mt-6 flex flex-col gap-4">
   <ComponentPreview
     name="sidebar-menu"
-    title="Sidebar Menu"
+    title="قائمة الشريط الجانبي"
     type="block"
-    description="A sidebar menu with a list of projects."
+    description="قائمة شريط جانبي تحتوي على قائمة مشاريع."
     className="w-full"
   />
   <figcaption className="text-center text-sm text-gray-500">
-    A sidebar menu with a list of projects.
+    قائمة شريط جانبي تحتوي على قائمة مشاريع.
   </figcaption>
 </figure>
 
@@ -811,7 +810,7 @@ Here's an example of a `SidebarMenu` component rendering a list of projects.
 <Sidebar>
   <SidebarContent>
     <SidebarGroup>
-      <SidebarGroupLabel>Projects</SidebarGroupLabel>
+      <SidebarGroupLabel>المشاريع</SidebarGroupLabel>
       <SidebarGroupContent>
         <SidebarMenu>
           {projects.map((project) => (
@@ -833,11 +832,11 @@ Here's an example of a `SidebarMenu` component rendering a list of projects.
 
 ## SidebarMenuButton
 
-The `SidebarMenuButton` component is used to render a menu button within a `SidebarMenuItem`.
+يُستخدم مكون `SidebarMenuButton` لعرض زر داخل `SidebarMenuItem`.
 
-### Link or Anchor
+### رابط أو وسم a
 
-By default, the `SidebarMenuButton` renders a button but you can use the `asChild` prop to render a different component such as a `Link` or an `a` tag.
+بشكل افتراضي، يعرض `SidebarMenuButton` زرًا، لكن يمكنك استخدام الخاصية `asChild` لعرض مكون مختلف مثل `Link` أو وسم `a`.
 
 ```tsx showLineNumbers
 <SidebarMenuButton asChild>
@@ -845,9 +844,9 @@ By default, the `SidebarMenuButton` renders a button but you can use the `asChil
 </SidebarMenuButton>
 ```
 
-### Icon and Label
+### أيقونة وعنوان
 
-You can render an icon and a truncated label inside the button. Remember to wrap the label in a `<span>`.
+يمكنك عرض أيقونة وعنوان داخل الزر. تذكر أن تضع العنوان داخل `<span>`.
 
 ```tsx showLineNumbers
 <SidebarMenuButton asChild>
@@ -860,7 +859,7 @@ You can render an icon and a truncated label inside the button. Remember to wrap
 
 ### isActive
 
-Use the `isActive` prop to mark a menu item as active.
+استخدم خاصية `isActive` لتمييز عنصر قائمة على أنه نشط.
 
 ```tsx showLineNumbers
 <SidebarMenuButton asChild isActive>
@@ -870,9 +869,9 @@ Use the `isActive` prop to mark a menu item as active.
 
 ## SidebarMenuAction
 
-The `SidebarMenuAction` component is used to render a menu action within a `SidebarMenuItem`.
+يُستخدم مكون `SidebarMenuAction` لعرض إجراء داخل `SidebarMenuItem`.
 
-This button works independently of the `SidebarMenuButton` i.e you can have the `<SidebarMenuButton />` as a clickable link and the `<SidebarMenuAction />` as a button.
+يعمل هذا الزر بشكل مستقل عن `SidebarMenuButton`؛ أي يمكنك جعل `<SidebarMenuButton />` رابطًا قابلًا للنقر و`<SidebarMenuAction />` زرًا.
 
 ```tsx showLineNumbers
 <SidebarMenuItem>
@@ -890,18 +889,18 @@ This button works independently of the `SidebarMenuButton` i.e you can have the 
 
 ### DropdownMenu
 
-Here's an example of a `SidebarMenuAction` component rendering a `DropdownMenu`.
+إليك مثالًا لمكون `SidebarMenuAction` يعرض `DropdownMenu`.
 
 <figure className="mt-6 flex flex-col gap-4">
   <ComponentPreview
     name="sidebar-menu-action"
-    title="Sidebar Menu Action"
+    title="إجراء قائمة الشريط الجانبي"
     type="block"
-    description="A sidebar menu action with a dropdown menu."
+    description="إجراء قائمة شريط جانبي مع قائمة منسدلة."
     className="w-full"
   />
   <figcaption className="text-center text-sm text-gray-500">
-    A sidebar menu action with a dropdown menu.
+    إجراء قائمة شريط جانبي مع قائمة منسدلة.
   </figcaption>
 </figure>
 
@@ -921,10 +920,10 @@ Here's an example of a `SidebarMenuAction` component rendering a `DropdownMenu`.
     </DropdownMenuTrigger>
     <DropdownMenuContent side="right" align="start">
       <DropdownMenuItem>
-        <span>Edit Project</span>
+        <span>تحرير المشروع</span>
       </DropdownMenuItem>
       <DropdownMenuItem>
-        <span>Delete Project</span>
+        <span>حذف المشروع</span>
       </DropdownMenuItem>
     </DropdownMenuContent>
   </DropdownMenu>
@@ -933,20 +932,20 @@ Here's an example of a `SidebarMenuAction` component rendering a `DropdownMenu`.
 
 ## SidebarMenuSub
 
-The `SidebarMenuSub` component is used to render a submenu within a `SidebarMenu`.
+يُستخدم مكون `SidebarMenuSub` لعرض قائمة فرعية داخل `SidebarMenu`.
 
-Use `<SidebarMenuSubItem />` and `<SidebarMenuSubButton />` to render a submenu item.
+استخدم `<SidebarMenuSubItem />` و`<SidebarMenuSubButton />` لعرض عنصر قائمة فرعية.
 
 <figure className="mt-6 flex flex-col gap-4">
   <ComponentPreview
     name="sidebar-menu-sub"
-    title="Sidebar Menu Sub"
+    title="القائمة الفرعية للشريط الجانبي"
     type="block"
-    description="A sidebar menu sub."
+    description="قائمة فرعية للشريط الجانبي."
     className="w-full"
   />
   <figcaption className="text-center text-sm text-gray-500">
-    A sidebar menu with a submenu.
+    قائمة شريط جانبي تحتوي على قائمة فرعية.
   </figcaption>
 </figure>
 
@@ -964,20 +963,20 @@ Use `<SidebarMenuSubItem />` and `<SidebarMenuSubButton />` to render a submenu 
 </SidebarMenuItem>
 ```
 
-## Collapsible SidebarMenu
+## SidebarMenu قابل للطي
 
-To make a `SidebarMenu` component collapsible, wrap it and the `SidebarMenuSub` components in a `Collapsible`.
+لجعل مكون `SidebarMenu` قابلاً للطي، لفّه مع مكون `SidebarMenuSub` داخل `Collapsible`.
 
 <figure className="mt-6 flex flex-col gap-4">
   <ComponentPreview
     name="sidebar-menu-collapsible"
-    title="Sidebar Menu"
+    title="قائمة الشريط الجانبي"
     type="block"
-    description="A collapsible sidebar menu."
+    description="قائمة شريط جانبي قابلة للطي."
     className="w-full"
   />
   <figcaption className="text-center text-sm text-gray-500">
-    A collapsible sidebar menu.
+    قائمة شريط جانبي قابلة للطي.
   </figcaption>
 </figure>
 
@@ -1000,18 +999,18 @@ To make a `SidebarMenu` component collapsible, wrap it and the `SidebarMenuSub` 
 
 ## SidebarMenuBadge
 
-The `SidebarMenuBadge` component is used to render a badge within a `SidebarMenuItem`.
+يُستخدم مكون `SidebarMenuBadge` لعرض شارة داخل `SidebarMenuItem`.
 
 <figure className="mt-6 flex flex-col gap-4">
   <ComponentPreview
     name="sidebar-menu-badge"
-    title="Sidebar Menu Badge"
+    title="شارة قائمة الشريط الجانبي"
     type="block"
-    description="A sidebar menu badge."
+    description="شارة لقائمة الشريط الجانبي."
     className="w-full"
   />
   <figcaption className="text-center text-sm text-gray-500">
-    A sidebar menu with a badge.
+    قائمة شريط جانبي مع شارة.
   </figcaption>
 </figure>
 
@@ -1024,7 +1023,7 @@ The `SidebarMenuBadge` component is used to render a badge within a `SidebarMenu
 
 ## SidebarMenuSkeleton
 
-The `SidebarMenuSkeleton` component is used to render a skeleton for a `SidebarMenu`. You can use this to show a loading state when using React Server Components, SWR or react-query.
+يُستخدم مكون `SidebarMenuSkeleton` لعرض هيكل عظمي لقائمة `SidebarMenu`. يمكنك استخدامه لعرض حالة التحميل عند استخدام React Server Components أو SWR أو react-query.
 
 ```tsx showLineNumbers
 function NavProjectsSkeleton() {
@@ -1042,7 +1041,7 @@ function NavProjectsSkeleton() {
 
 ## SidebarSeparator
 
-The `SidebarSeparator` component is used to render a separator within a `Sidebar`.
+يُستخدم مكون `SidebarSeparator` لعرض فاصل داخل `Sidebar`.
 
 ```tsx showLineNumbers
 <Sidebar>
@@ -1058,9 +1057,9 @@ The `SidebarSeparator` component is used to render a separator within a `Sidebar
 
 ## SidebarTrigger
 
-Use the `SidebarTrigger` component to render a button that toggles the sidebar.
+استخدم مكون `SidebarTrigger` لعرض زر يبدّل حالة الشريط الجانبي.
 
-The `SidebarTrigger` component must be used within a `SidebarProvider`.
+يجب استخدام مكون `SidebarTrigger` داخل `SidebarProvider`.
 
 ```tsx showLineNumbers
 <SidebarProvider>
@@ -1071,9 +1070,9 @@ The `SidebarTrigger` component must be used within a `SidebarProvider`.
 </SidebarProvider>
 ```
 
-### Custom Trigger
+### مُشغّل مخصص
 
-To create a custom trigger, you can use the `useSidebar` hook.
+لإنشاء مُشغّل مخصص، يمكنك استخدام الدالة `useSidebar`.
 
 ```tsx showLineNumbers
 import { useSidebar } from "@/components/ui/sidebar"
@@ -1081,13 +1080,13 @@ import { useSidebar } from "@/components/ui/sidebar"
 export function CustomTrigger() {
   const { toggleSidebar } = useSidebar()
 
-  return <button onClick={toggleSidebar}>Toggle Sidebar</button>
+  return <button onClick={toggleSidebar}>تبديل الشريط الجانبي</button>
 }
 ```
 
 ## SidebarRail
 
-The `SidebarRail` component is used to render a rail within a `Sidebar`. This rail can be used to toggle the sidebar.
+يُستخدم مكون `SidebarRail` لعرض مسار داخل `Sidebar`. يمكن استخدام هذا المسار لتبديل الشريط الجانبي.
 
 ```tsx showLineNumbers
 <Sidebar>
@@ -1100,22 +1099,22 @@ The `SidebarRail` component is used to render a rail within a `Sidebar`. This ra
 </Sidebar>
 ```
 
-## Data Fetching
+## جلب البيانات
 
 ### React Server Components
 
-Here's an example of a `SidebarMenu` component rendering a list of projects using React Server Components.
+إليك مثالًا لمكون `SidebarMenu` يعرض قائمة مشاريع باستخدام React Server Components.
 
 <figure className="mt-6 flex flex-col gap-4">
   <ComponentPreview
     name="sidebar-rsc"
-    title="Sidebar Menu RSC"
+    title="قائمة الشريط الجانبي RSC"
     type="block"
-    description="A sidebar menu using React Server Components."
+    description="قائمة شريط جانبي باستخدام React Server Components."
     className="w-full"
   />
   <figcaption className="text-center text-sm text-gray-500">
-    A sidebar menu using React Server Components.
+    قائمة شريط جانبي باستخدام React Server Components.
   </figcaption>
 </figure>
 
@@ -1173,9 +1172,9 @@ function AppSidebar() {
 }
 ```
 
-### SWR and React Query
+### SWR و React Query
 
-You can use the same approach with [SWR](https://swr.vercel.app/) or [react-query](https://tanstack.com/query/latest/docs/framework/react/overview).
+يمكنك استخدام النهج نفسه مع [SWR](https://swr.vercel.app/) أو [react-query](https://tanstack.com/query/latest/docs/framework/react/overview).
 
 ```tsx showLineNumbers title="SWR"
 function NavProjects() {
@@ -1251,20 +1250,20 @@ function NavProjects() {
 }
 ```
 
-## Controlled Sidebar
+## شريط جانبي مُتحكَّم به
 
-Use the `open` and `onOpenChange` props to control the sidebar.
+استخدم خاصيتي `open` و`onOpenChange` للتحكم في الشريط الجانبي.
 
 <figure className="mt-6 flex flex-col gap-4">
   <ComponentPreview
     name="sidebar-controlled"
-    title="Sidebar Controlled"
+    title="شريط جانبي مُتحكَّم به"
     type="block"
-    description="A controlled sidebar."
+    description="شريط جانبي مُتحكَّم به."
     className="w-full"
   />
   <figcaption className="text-center text-sm text-gray-500">
-    A controlled sidebar.
+    شريط جانبي مُتحكَّم به.
   </figcaption>
 </figure>
 
@@ -1280,9 +1279,9 @@ export function AppSidebar() {
 }
 ```
 
-## Theming
+## التهيئة
 
-We use the following CSS variables to theme the sidebar.
+نستخدم متغيرات CSS التالية لتهيئة الشريط الجانبي.
 
 ```css
 @layer base {
@@ -1310,13 +1309,13 @@ We use the following CSS variables to theme the sidebar.
 }
 ```
 
-**We intentionally use different variables for the sidebar and the rest of the application** to make it easy to have a sidebar that is styled differently from the rest of the application. Think a sidebar with a darker shade from the main application.
+**نستخدم عمدًا متغيرات مختلفة للشريط الجانبي وبقية التطبيق** لجعل من السهل الحصول على شريط جانبي بتصميم مختلف عن بقية التطبيق. تخيّل شريطًا جانبيًا بدرجة داكنة أكثر من التطبيق الرئيسي.
 
-## Styling
+## التنسيق
 
-Here are some tips for styling the sidebar based on different states.
+إليك بعض النصائح لتنسيق الشريط الجانبي بناءً على حالات مختلفة.
 
-- **Styling an element based on the sidebar collapsible state.** The following will hide the `SidebarGroup` when the sidebar is in `icon` mode.
+- **تنسيق عنصر بناءً على حالة قابلية طي الشريط الجانبي.** التالي سيخفي `SidebarGroup` عندما يكون الشريط الجانبي في وضع `icon`.
 
 ```tsx
 <Sidebar collapsible="icon">
@@ -1326,7 +1325,7 @@ Here are some tips for styling the sidebar based on different states.
 </Sidebar>
 ```
 
-- **Styling a menu action based on the menu button active state.** The following will force the menu action to be visible when the menu button is active.
+- **تنسيق إجراء القائمة بناءً على حالة زر القائمة النشطة.** التالي سيجبر إجراء القائمة على الظهور عندما يكون زر القائمة نشطًا.
 
 ```tsx
 <SidebarMenuItem>
@@ -1335,13 +1334,13 @@ Here are some tips for styling the sidebar based on different states.
 </SidebarMenuItem>
 ```
 
-You can find more tips on using states for styling in this [Twitter thread](https://x.com/shadcn/status/1842329158879420864).
+يمكنك العثور على مزيد من النصائح حول استخدام الحالات للتنسيق في [خيط على منصة X](https://x.com/shadcn/status/1842329158879420864).
 
-## Changelog
+## سجل التغييرات
 
-### 2024-10-30 Cookie handling in setOpen
+### 2024-10-30 التعامل مع ملفات تعريف الارتباط في setOpen
 
-- [#5593](https://github.com/shadcn-ui/ui/pull/5593) - Improved setOpen callback logic in `<SidebarProvider>`.
+- [#5593](https://github.com/shadcn-ui/ui/pull/5593) - تحسين منطق الاستدعاء setOpen في `<SidebarProvider>`.
 
 Update the `setOpen` callback in `<SidebarProvider>` as follows:
 
@@ -1355,20 +1354,20 @@ const setOpen = React.useCallback(
       _setOpen(openState)
     }
 
-    // This sets the cookie to keep the sidebar state.
+    // هذا يعيّن ملف تعريف الارتباط للحفاظ على حالة الشريط الجانبي.
     document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}; path=/; max-age=${SIDEBAR_COOKIE_MAX_AGE}`
   },
   [setOpenProp, open]
 )
 ```
 
-### 2024-10-21 Fixed `text-sidebar-foreground`
+### 2024-10-21 إصلاح `text-sidebar-foreground`
 
-- [#5491](https://github.com/shadcn-ui/ui/pull/5491) - Moved `text-sidebar-foreground` from `<SidebarProvider>` to `<Sidebar>` component.
+- [#5491](https://github.com/shadcn-ui/ui/pull/5491) - نقل `text-sidebar-foreground` من `<SidebarProvider>` إلى مكون `<Sidebar>`.
 
-### 2024-10-20 Typo in `useSidebar` hook.
+### 2024-10-20 خطأ مطبعي في الدالة `useSidebar`.
 
-Fixed typo in `useSidebar` hook.
+تم إصلاح الخطأ المطبعي في `useSidebar`.
 
 ```diff showLineNumbers title="sidebar.tsx"
 -  throw new Error("useSidebar must be used within a Sidebar.")

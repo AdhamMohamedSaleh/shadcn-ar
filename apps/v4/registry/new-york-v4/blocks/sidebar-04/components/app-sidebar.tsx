@@ -18,136 +18,136 @@ import {
 const data = {
   navMain: [
     {
-      title: "Getting Started",
+      title: "البدء",
       url: "#",
       items: [
         {
-          title: "Installation",
+          title: "التثبيت",
           url: "#",
         },
         {
-          title: "Project Structure",
+          title: "هيكل المشروع",
           url: "#",
         },
       ],
     },
     {
-      title: "Building Your Application",
+      title: "بناء تطبيقك",
       url: "#",
       items: [
         {
-          title: "Routing",
+          title: "التوجيه",
           url: "#",
         },
         {
-          title: "Data Fetching",
+          title: "جلب البيانات",
           url: "#",
           isActive: true,
         },
         {
-          title: "Rendering",
+          title: "التصيير",
           url: "#",
         },
         {
-          title: "Caching",
+          title: "التخزين المؤقت",
           url: "#",
         },
         {
-          title: "Styling",
+          title: "التنسيق",
           url: "#",
         },
         {
-          title: "Optimizing",
+          title: "التحسين",
           url: "#",
         },
         {
-          title: "Configuring",
+          title: "الإعداد",
           url: "#",
         },
         {
-          title: "Testing",
+          title: "الاختبار",
           url: "#",
         },
         {
-          title: "Authentication",
+          title: "المصادقة",
           url: "#",
         },
         {
-          title: "Deploying",
+          title: "النشر",
           url: "#",
         },
         {
-          title: "Upgrading",
+          title: "الترقية",
           url: "#",
         },
         {
-          title: "Examples",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "API Reference",
-      url: "#",
-      items: [
-        {
-          title: "Components",
-          url: "#",
-        },
-        {
-          title: "File Conventions",
-          url: "#",
-        },
-        {
-          title: "Functions",
-          url: "#",
-        },
-        {
-          title: "next.config.js Options",
-          url: "#",
-        },
-        {
-          title: "CLI",
-          url: "#",
-        },
-        {
-          title: "Edge Runtime",
+          title: "الأمثلة",
           url: "#",
         },
       ],
     },
     {
-      title: "Architecture",
+      title: "مرجع API",
       url: "#",
       items: [
         {
-          title: "Accessibility",
+          title: "المكونات",
           url: "#",
         },
         {
-          title: "Fast Refresh",
+          title: "أعراف الملفات",
           url: "#",
         },
         {
-          title: "Next.js Compiler",
+          title: "الدوال",
           url: "#",
         },
         {
-          title: "Supported Browsers",
+          title: "خيارات next.config.js",
           url: "#",
         },
         {
-          title: "Turbopack",
+          title: "سطر الأوامر",
+          url: "#",
+        },
+        {
+          title: "بيئة Edge",
           url: "#",
         },
       ],
     },
     {
-      title: "Community",
+      title: "البنية",
       url: "#",
       items: [
         {
-          title: "Contribution Guide",
+          title: "إمكانية الوصول",
+          url: "#",
+        },
+        {
+          title: "التحديث السريع",
+          url: "#",
+        },
+        {
+          title: "مترجم Next.js",
+          url: "#",
+        },
+        {
+          title: "المتصفحات المدعومة",
+          url: "#",
+        },
+        {
+          title: "توربوباك",
+          url: "#",
+        },
+      ],
+    },
+    {
+      title: "المجتمع",
+      url: "#",
+      items: [
+        {
+          title: "دليل المساهمة",
           url: "#",
         },
       ],
@@ -167,7 +167,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                   <GalleryVerticalEnd className="size-4" />
                 </div>
                 <div className="flex flex-col gap-0.5 leading-none">
-                  <span className="font-medium">Documentation</span>
+                  <span className="font-medium">التوثيق</span>
                   <span className="">v1.0.0</span>
                 </div>
               </a>
